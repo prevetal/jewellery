@@ -1,0 +1,324 @@
+@media (max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --cont_padding: 20px;
+        --block_head_offset: 32px;
+        --block_padding_xl: 40px;
+        --block_padding_l: 32px;
+        --block_padding: 28px;
+        --block_padding_s: 20px;
+        --outside_gap: 68px;
+        --outside_gap_s: 60px;
+        --inner_gap_l: 24px;
+        --inner_gap_m: 20px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-block: var(--inner_gap_s);
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        margin-bottom: 0;
+    }
+
+
+    .mob_header .logo img
+    {
+        height: 68px;
+    }
+
+
+    .mob_header .phone
+    {
+        margin-right: var(--inner_gap);
+
+        font-size: var(--font_size);
+    }
+
+
+    .mob_header .cart,
+    .mob_header .account
+    {
+        margin-left: 4px;
+    }
+
+
+    .mob_header .cart a,
+    .mob_header .account a
+    {
+        width: 32px;
+    }
+
+
+    .mob_header .cart a .icon,
+    .mob_header .account a .icon
+    {
+        width: 18px;
+    }
+
+
+    .mob_header .mob_menu_btn
+    {
+        width: 32px;
+        margin-left: 4px;
+    }
+
+
+    .mob_header .mob_menu_btn span
+    {
+        width: 20px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title.big span
+    {
+        font-size: 56px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .cont
+    {
+        padding: 0;
+    }
+
+
+    .first_section .data
+    {
+        padding-block: var(--block_padding_xl);
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .first_section .title br
+    {
+        display: none;
+    }
+
+
+    .first_section .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .first_section .btns
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .first_section .btns .btn
+    {
+        height: 68px;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .head .items
+    {
+        font-size: var(--font_size_s);
+
+        gap: var(--inner_gap_xs) var(--inner_gap_s);
+    }
+
+
+    .why_we .col_left
+    {
+        width: 100%;
+    }
+
+
+    .why_we .boss
+    {
+        width: 100%;
+        margin-top: var(--block_padding_l);
+    }
+
+
+    .why_we .boss .image img
+    {
+        height: auto;
+    }
+
+
+    .why_we .landmark
+    {
+        margin-inline: 0;
+    }
+
+
+    .why_we .landmark .val
+    {
+        font-size: var(--font_size_s);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .steps .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .steps .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .steps .grid_row > *
+    {
+        width: 280px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .grid_row
+    {
+        --items_per_line: 1;
+        --gap_y: var(--inner_gap);
+    }
+
+
+
+    /*-------------
+        Payment
+    -------------*/
+    .payment .cont
+    {
+        padding: 0;
+    }
+
+
+    .payment .data
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .payment .items
+    {
+        justify-content: flex-start;
+
+        row-gap: var(--inner_gap);
+        column-gap: var(--block_padding_xl);
+    }
+
+
+
+    /*---------------
+        Materials
+    ---------------*/
+    .materials .material,
+    .materials .material.dark
+    {
+        width: 100%;
+    }
+
+
+
+    /*-----------
+        Order
+    -----------*/
+    .order:before
+    {
+        margin-left: 0;
+    }
+
+
+    .order .cont
+    {
+        padding: 0;
+    }
+
+
+    .order .data
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+
+    /*---------------
+        Lets make
+    ---------------*/
+    .lets_make .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .lets_make .btns .btn
+    {
+        height: 68px;
+    }
+
+
+    .lets_make .bg
+    {
+        top: -48px;
+
+        width: 768px;
+        margin-left: -480px;
+    }
+}

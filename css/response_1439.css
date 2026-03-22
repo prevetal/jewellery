@@ -1,0 +1,594 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --cont_padding: 24px;
+        --font_size_xl: 18px;
+        --font_size_title_l: 52px;
+    }
+
+
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        height: 48px;
+
+        --swiper-navigation-size: 96px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-block: var(--inner_gap);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .accordion_item .head .title
+    {
+        width: calc(100% - 28px - var(--inner_gap_m));
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 28px;
+    }
+
+
+    .accordion_item .data
+    {
+        margin-top: 0;
+        padding-inline: var(--block_padding_l);
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        margin-bottom: var(--block_padding_l);
+    }
+
+
+    header:before,
+    header:after
+    {
+        top: 68px;
+
+        width: calc(50% - 100px);
+    }
+
+
+    header .logo
+    {
+        top: var(--inner_gap);
+    }
+
+
+    header .logo img
+    {
+        width: 164px;
+        height: 86px;
+    }
+
+
+    header .top
+    {
+        padding-block: var(--inner_gap);
+    }
+
+
+    header .top .col,
+    header .menu .col
+    {
+        width: calc(50% - 100px);
+    }
+
+
+    header .top .col + .col,
+    header .menu .col + .col
+    {
+        width: 448px;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title.big span
+    {
+        font-size: 72px;
+    }
+
+
+    .block_head .desc.big
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .data
+    {
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--block_padding_xl);
+    }
+
+
+    .first_section .col
+    {
+        width: 628px;
+
+        gap: var(--block_padding_l);
+    }
+
+
+    .first_section .col + .col
+    {
+        width: calc(100% - 628px - var(--block_padding_xl));
+    }
+
+
+    .first_section .items
+    {
+        gap: var(--block_padding);
+    }
+
+
+    .first_section .btns .btn
+    {
+        height: 80px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .first_section .btns .btn span
+    {
+        max-width: calc(100% - 22px - var(--inner_gap));
+    }
+
+
+
+    /*----------
+        When
+    ----------*/
+    .when .block_head
+    {
+        margin-bottom: var(--block_padding_l);
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .head .items
+    {
+        width: 100%;
+    }
+
+
+    .why_we .col_left
+    {
+        width: 460px;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .why_we .design
+    {
+        height: 360px;
+        padding: var(--inner_gap_l);
+    }
+
+
+    .why_we .boss
+    {
+        width: 252px;
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .why_we .boss .image img
+    {
+        height: 400px;
+
+        object-fit: cover;
+    }
+
+
+    .why_we .boss .desc
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+    .why_we .col_right
+    {
+        width: calc(100% - 712px);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .why_we .banners .banner
+    {
+        height: 400px;
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .why_we .landmark
+    {
+        margin-right: 0;
+        margin-left: var(--inner_gap_m);
+
+        gap: var(--inner_gap);
+    }
+
+
+    .why_we .landmark .title
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+
+    /*--------------
+        For whom
+    --------------*/
+    .for_whom .block_head
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .for_whom .item
+    {
+        font-size: var(--font_size);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .swiper-button-prev
+    {
+        left: calc(600px + var(--inner_gap_l));
+    }
+
+
+    .cases .swiper-button-next
+    {
+        left: calc(600px + var(--inner_gap_l) + var(--swiper-navigation-size) + var(--inner_gap_s));
+    }
+
+
+    .cases .case .images
+    {
+        width: 600px;
+    }
+
+
+    .cases .case .image
+    {
+        width: 280px;
+    }
+
+
+    .cases .case .image.b_w
+    {
+        width: 320px;
+    }
+
+
+    .cases .case .data
+    {
+        width: calc(100% - 600px);
+        padding-block: var(--block_padding_l) 108px;
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps
+    {
+        padding-bottom: 0;
+    }
+
+
+    .steps .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+    }
+
+
+    .steps .item .info
+    {
+        padding-block: var(--inner_gap_m);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees
+    {
+        padding-bottom: 0;
+    }
+
+
+    .guarantees .data
+    {
+        width: calc(100% - 240px - var(--inner_gap_m));
+        padding-top: 0;
+    }
+
+
+    .guarantees .grid_row
+    {
+        --gap_y: var(--outside_gap_s);
+    }
+
+
+    .guarantees .item span
+    {
+        width: calc(100% - 45px - var(--inner_gap));
+    }
+
+
+    .guarantees .delivery
+    {
+        width: 240px;
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap_m);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .guarantees .delivery .title
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+    .guarantees .delivery .desc
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+    .guarantees .bg
+    {
+        top: calc(var(--outside_gap) * -1);
+
+        width: 1140px;
+    }
+
+
+
+    /*-------------
+        Payment
+    -------------*/
+    .payment
+    {
+        padding-bottom: 0;
+    }
+
+
+    .payment .data
+    {
+        padding-block: var(--outside_gap_s);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .payment .block_head
+    {
+        width: 580px;
+    }
+
+
+    .payment .block_head .desc
+    {
+        width: 452px;
+    }
+
+
+    .payment .items .number
+    {
+        width: 80px;
+    }
+
+
+    .payment .col_right
+    {
+        width: 344px;
+    }
+
+
+
+    /*---------------
+        Materials
+    ---------------*/
+    .materials .block_head
+    {
+        width: 392px;
+        padding-top: var(--inner_gap_s);
+    }
+
+
+    .materials .material
+    {
+        width: 300px;
+
+        gap: var(--inner_gap_l);
+    }
+
+
+    .materials .material.dark
+    {
+        width: 400px;
+    }
+
+
+    .materials .material .metal
+    {
+        gap: 4px;
+    }
+
+
+    .materials .material .desc.s_w
+    {
+        width: 220px;
+    }
+
+
+    .materials .bg
+    {
+        top: -152px;
+
+        width: 900px;
+        margin-left: -788px;
+    }
+
+
+
+    /*--------------------
+        Hidden details
+    --------------------*/
+    .hidden_details:not(.block)
+    {
+        margin-bottom: var(--outside_gap);
+    }
+
+
+    .hidden_details .block_head
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .hidden_details .item .thumb
+    {
+        margin-bottom: var(--inner_gap_s);
+    }
+
+
+
+    /*-----------
+        Order
+    -----------*/
+    .order
+    {
+        padding-bottom: var(--block_padding_xl);
+    }
+
+
+    .order:before
+    {
+        left: var(--cont_padding);
+
+        height: calc(100% + var(--block_padding_xl));
+        margin-left: var(--outside_gap_s);
+    }
+
+
+    .order .data
+    {
+        padding-block: var(--outside_gap_s);
+        padding-inline: var(--outside_gap_s);
+    }
+
+
+    .order .col_left
+    {
+        width: 300px;
+    }
+
+
+    .order .col_left .exp
+    {
+        margin-top: var(--inner_gap_l);
+    }
+
+
+
+    .order .col_main .desc
+    {
+        width: 480px;
+    }
+
+
+
+    /*---------------
+        Lets make
+    ---------------*/
+    .lets_make .title
+    {
+        font-size: var(--font_size_title_s);
+    }
+
+
+    .lets_make .title span
+    {
+        font-size: 44px;
+    }
+
+
+    .lets_make .desc
+    {
+        width: 800px;
+    }
+
+
+    .lets_make .btns
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .lets_make .btns .btn
+    {
+        width: 400px;
+        height: 80px;
+    }
+
+
+    .lets_make .bg
+    {
+        top: -172px;
+
+        width: 1120px;
+        margin-left: -680px;
+    }
+}

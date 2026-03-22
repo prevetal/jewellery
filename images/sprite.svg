@@ -1,0 +1,26 @@
+<svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 22" id="ic_arr_hor">
+    <path d="M12.7598 0.376221L0.759766 10.8762L12.7598 21.3762" stroke="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" id="ic_arr_ver">
+    <path d="M1 0.5L6 4.5L11 0.5" stroke="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 8" id="ic_arrow_hor">
+    <path d="M21.3536 4.03556C21.5488 3.8403 21.5488 3.52372 21.3536 3.32845L18.1716 0.146473C17.9763 -0.0487893 17.6597 -0.0487893 17.4645 0.146473C17.2692 0.341735 17.2692 0.658318 17.4645 0.85358L20.2929 3.68201L17.4645 6.51043C17.2692 6.7057 17.2692 7.02228 17.4645 7.21754C17.6597 7.4128 17.9763 7.4128 18.1716 7.21754L21.3536 4.03556ZM0 3.68201V4.18201H21V3.68201V3.18201H0V3.68201Z" fill="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="ic_cart">
+    <path d="M5.60002 4.33333H10.4C12.6667 4.33333 12.8934 5.39333 13.0467 6.68666L13.6467 11.6867C13.84 13.3267 13.3334 14.6667 11 14.6667H5.00668C2.66668 14.6667 2.16002 13.3267 2.36002 11.6867L2.96002 6.68666C3.10669 5.39333 3.33335 4.33333 5.60002 4.33333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M5.33301 5.33333V3C5.33301 2 5.99967 1.33333 6.99967 1.33333H8.99967C9.99967 1.33333 10.6663 2 10.6663 3V5.33333" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13.6063 11.3529H5.33301" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 11" id="ic_diamond">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.6738 0H8.5674L11.3476 3.0638L5.6738 10.3262L0 3.0638L2.7802 0H5.6738ZM8.3405 3.2907L5.6738 7.3758L3.0071 3.2907L3.8582 2.4397H5.6738H7.4894L8.3405 3.2907Z" fill="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 10" id="ic_sep_arr">
+    <path d="M8.25 4.76318L3.80041 6.58254L0 9.52632L0.649187 4.76318L0 4.3869e-05L3.80041 2.94383L8.25 4.76318Z" fill="currentColor"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="ic_user">
+    <path d="M8.00033 8C9.84127 8 11.3337 6.50761 11.3337 4.66667C11.3337 2.82572 9.84127 1.33333 8.00033 1.33333C6.15938 1.33333 4.66699 2.82572 4.66699 4.66667C4.66699 6.50761 6.15938 8 8.00033 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M13.7268 14.6667C13.7268 12.0867 11.1601 10 8.0001 10C4.8401 10 2.27344 12.0867 2.27344 14.6667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  </symbol>
+</svg>

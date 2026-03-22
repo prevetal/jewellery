@@ -1,0 +1,337 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title_l: 40px;
+        --font_size_title: 36px;
+        --font_size_title_s: 28px;
+        --font_size_title_xs: 22px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head .title
+    {
+        font-size: var(--font_size_xl);
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title.big span
+    {
+        font-size: 58px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .data
+    {
+        padding-block: var(--outside_gap_s);
+    }
+
+
+    .first_section .btns .btn
+    {
+        width: 100%;
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we
+    {
+        padding-block: var(--block_padding_xl);
+    }
+
+
+    .why_we .col_left
+    {
+        width: calc(100% - 240px);
+    }
+
+
+    .why_we .boss
+    {
+        width: 240px;
+    }
+
+
+    .why_we .col_right
+    {
+        width: 100%;
+        margin-top: var(--block_padding_l);
+    }
+
+
+    .why_we .banners .banner
+    {
+        height: 320px;
+        padding-block: var(--inner_gap_m);
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .why_we .landmark
+    {
+        margin-inline: var(--inner_gap_m);
+    }
+
+
+
+    /*--------------
+        For whom
+    --------------*/
+    .for_whom .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .for_whom .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .for_whom .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .for_whom .grid_row > *
+    {
+        width: 200px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .case .images,
+    .cases .case .data
+    {
+        width: 100%;
+    }
+
+
+    .cases .case .image
+    {
+        width: 44%;
+    }
+
+
+    .cases .case .image.b_w
+    {
+        width: 56%;
+    }
+
+
+    .cases .swiper-button-prev
+    {
+        left: var(--inner_gap_m);
+    }
+
+    .cases .swiper-button-next
+    {
+        left: calc(var(--inner_gap_m) + var(--swiper-navigation-size) + var(--inner_gap_s));
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .data
+    {
+        width: 100%;
+    }
+
+
+    .guarantees .delivery
+    {
+        width: 100%;
+        margin-top: var(--block_padding_l);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .guarantees .bg
+    {
+        display: none;
+    }
+
+
+
+    /*-------------
+        Payment
+    -------------*/
+    .payment .data
+    {
+        padding-block: var(--block_padding_xl);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .payment .col_main
+    {
+        width: 100%;
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .payment .items > *
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .payment .items .number
+    {
+        width: 60px;
+    }
+
+
+    .payment .col_right
+    {
+        width: 100%;
+        margin-top: var(--block_padding_l);
+    }
+
+
+
+    /*---------------
+        Materials
+    ---------------*/
+    .materials .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+        padding: 0;
+
+        gap: 16px;
+    }
+
+
+    .materials .data
+    {
+        gap: var(--inner_gap_xs);
+    }
+
+
+    .materials .material,
+    .materials .material.dark
+    {
+        width: calc(50% - var(--inner_gap_xs) / 2);
+    }
+
+
+    .materials .bg
+    {
+        display: none;
+    }
+
+
+
+    /*-----------
+        Order
+    -----------*/
+    .order .col_left
+    {
+        width: 100%;
+    }
+
+
+    .order .col_left .exp
+    {
+        margin-top: var(--inner_gap_s);
+    }
+
+
+    .order .col_main
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------
+        Lets make
+    ---------------*/
+    .lets_make .title span
+    {
+        font-size: 39px;
+    }
+
+
+    .lets_make .desc
+    {
+        width: 560px;
+    }
+
+
+    .lets_make .btns
+    {
+        width: 480px;
+        max-width: 100%;
+        margin-inline: auto;
+        margin-top: var(--block_padding_l);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .lets_make .btns .btn
+    {
+        width: 100%;
+    }
+}

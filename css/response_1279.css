@@ -1,0 +1,547 @@
+@media print,
+(max-width: 1279px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --custom_scroll_width: 5px;
+        --custom_scroll_height: 5px;
+        --font_size_title_l: 48px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion_item .head
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .accordion_item .head .title
+    {
+        width: calc(100% - 24px - var(--inner_gap_m));
+    }
+
+
+    .accordion_item .head .icon
+    {
+        width: 24px;
+    }
+
+
+    .accordion_item .data
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+
+    /*------------
+        Header
+    ------------*/
+    header
+    {
+        display: none;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header
+    {
+        display: block;
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head
+    {
+        gap: var(--inner_gap_m);
+    }
+
+
+    .block_head .title.big span
+    {
+        font-size: 68px;
+    }
+
+
+
+    /*-------------------
+        First section
+    -------------------*/
+    .first_section .data
+    {
+        padding-inline: var(--block_padding_l);
+
+        text-align: center;
+    }
+
+
+    .first_section .col
+    {
+        width: 100%;
+
+        gap: var(--block_padding_l);
+    }
+
+
+    .first_section .col + .col
+    {
+        width: 100%;
+        margin-top: var(--block_padding_l);
+
+        gap: var(--inner_gap_m);
+    }
+
+
+    .first_section .title span:not(.primary)
+    {
+        margin: 0;
+    }
+
+
+    .first_section .items
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .first_section .btns
+    {
+        align-content: stretch;
+        align-items: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        gap: var(--inner_gap);
+    }
+
+
+    .first_section .btns .btn
+    {
+        width: calc(50% - var(--inner_gap) / 2);
+        height: 80px;
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .first_section .btns .btn span
+    {
+        max-width: calc(100% - 22px - var(--inner_gap_s));
+    }
+
+
+
+    /*----------
+        When
+    ----------*/
+    .when .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .when .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .when .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .when .grid_row > *
+    {
+        width: 280px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .when .item
+    {
+        padding-bottom: 0;
+    }
+
+
+    .when .item .image
+    {
+        width: 120px;
+        margin-bottom: var(--inner_gap_s);
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .head .items
+    {
+        gap: var(--inner_gap_s) 16px;
+    }
+
+
+    .why_we .col_left
+    {
+        width: 360px;
+    }
+
+
+    .why_we .design
+    {
+        height: 332px;
+    }
+
+
+    .why_we .boss
+    {
+        width: 220px;
+    }
+
+
+    .why_we .boss .image img
+    {
+        height: 360px;
+    }
+
+
+    .why_we .col_right
+    {
+        width: calc(100% - 580px);
+    }
+
+
+    .why_we .banners .banner
+    {
+        height: 360px;
+        padding-block: var(--inner_gap);
+        padding-inline: var(--inner_gap);
+    }
+
+
+    .why_we .landmark
+    {
+        margin-left: var(--inner_gap);
+    }
+
+
+
+    /*--------------
+        For whom
+    --------------*/
+    .for_whom .data
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+    .for_whom .item br
+    {
+        display: none;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .swiper-button-prev
+    {
+        left: calc(560px + var(--inner_gap_l));
+    }
+
+
+    .cases .swiper-button-next
+    {
+        left: calc(560px + var(--inner_gap_l) + var(--swiper-navigation-size) + var(--inner_gap_s));
+    }
+
+
+    .cases .case .images
+    {
+        width: 560px;
+    }
+
+
+    .cases .case .image
+    {
+        width: 260px;
+    }
+
+
+    .cases .case .image.b_w
+    {
+        width: 300px;
+    }
+
+
+    .cases .case .data
+    {
+        width: calc(100% - 560px);
+        padding-top: var(--inner_gap_m);
+    }
+
+
+    .cases .case .name
+    {
+        font-size: var(--font_size_title_s);
+    }
+
+
+    .cases .case .info .task,
+    .cases .case .info .solution
+    {
+        width: 100%;
+    }
+
+
+    .cases .case .info .items
+    {
+        font-size: var(--font_size_s);
+
+        gap: var(--inner_gap_xs);
+    }
+
+
+
+    /*-----------
+        Steps
+    -----------*/
+    .steps .item .info
+    {
+        padding-block: var(--inner_gap);
+    }
+
+
+    .steps .item .desc
+    {
+        font-size: var(--font_size_s);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .data
+    {
+        width: calc(100% - 260px - var(--inner_gap_m));
+        padding-top: 0;
+    }
+
+
+    .guarantees .grid_row
+    {
+        --items_per_line: 2;
+        --gap_y: var(--block_padding);
+    }
+
+
+    .guarantees .item
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .guarantees .delivery
+    {
+        width: 260px;
+    }
+
+
+    .guarantees .bg
+    {
+        width: 1000px;
+    }
+
+
+
+    /*-------------
+        Payment
+    -------------*/
+    .payment .data
+    {
+        padding-block: var(--outside_gap_s);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .payment .items .number
+    {
+        width: 68px;
+    }
+
+
+    .payment .col_right
+    {
+        width: 308px;
+    }
+
+
+    .payment .col_right .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .payment .col_right .desc small
+    {
+        font-size: var(--font_size_xs);
+    }
+
+
+
+    /*---------------
+        Materials
+    ---------------*/
+    .materials .block_head
+    {
+        width: 348px;
+    }
+
+
+    .materials .material,
+    .materials .material.dark
+    {
+        width: 280px;
+    }
+
+
+    .materials .bg
+    {
+        top: -120px;
+
+        width: 800px;
+        margin-left: -600px;
+    }
+
+
+
+    /*--------------------
+        Hidden details
+    --------------------*/
+    .hidden_details .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .hidden_details .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .hidden_details .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .hidden_details .grid_row > *
+    {
+        width: 280px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-----------
+        Order
+    -----------*/
+    .order:before
+    {
+        margin-left: var(--block_padding_l);
+    }
+
+
+    .order .data
+    {
+        padding-block: var(--block_padding_xl);
+        padding-inline: var(--block_padding_l);
+
+        gap: var(--block_padding_l);
+    }
+
+
+    .order .col_left
+    {
+        width: 280px;
+    }
+
+
+    .order .col_main
+    {
+        width: calc(100% - 280px - var(--block_padding_l));
+
+        gap: var(--inner_gap_m);
+    }
+
+
+
+    /*---------------
+        Lets make
+    ---------------*/
+    .lets_make .bg
+    {
+        top: -120px;
+
+        width: 1000px;
+        margin-left: -600px;
+    }
+}

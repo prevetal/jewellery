@@ -1,0 +1,164 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title_l: 33px;
+        --font_size_title: 30px;
+        --font_size_title_s: 26px;
+        --font_size_title_xs: 22px;
+    }
+
+
+
+    /*---------------
+        Accordion
+    ---------------*/
+    .accordion
+    {
+        margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+
+    /*----------------
+        Block head
+    ----------------*/
+    .block_head .title.big span
+    {
+        font-size: 50px;
+    }
+
+
+
+    /*-----------------
+        Mob. header
+    -----------------*/
+    .mob_header .logo img
+    {
+        height: 60px;
+    }
+
+
+    .mob_header .phone
+    {
+        display: none;
+    }
+
+
+    .mob_header .cart,
+    .mob_header .account,
+    .mob_header .mob_menu_btn
+    {
+        margin-left: var(--inner_gap_xs);
+    }
+
+
+
+    /*------------------
+        Form elements
+    ------------------*/
+    .form .columns > *
+    {
+        width: calc(100% - var(--form_columns_gap));
+    }
+
+
+
+    /*----------
+        When
+    ----------*/
+    .when .block_head .title.small
+    {
+        font-size: var(--font_size_title_xs);
+    }
+
+
+
+    /*------------
+        Why we
+    ------------*/
+    .why_we .data
+    {
+        margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+    .why_we .boss .image img
+    {
+        height: 500px;
+    }
+
+
+    .why_we .boss .desc
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .why_we .banners .banner
+    {
+        width: 100%;
+        height: 260px;
+    }
+
+
+    .why_we .landmark
+    {
+        margin-inline: var(--cont_padding);
+    }
+
+
+
+    /*--------------
+        For whom
+    --------------*/
+    .for_whom .cont
+    {
+        padding: 0;
+    }
+
+
+
+    /*-----------
+        Cases
+    -----------*/
+    .cases .swiper
+    {
+        margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .delivery
+    {
+        width: calc(100% + var(--cont_padding_double));
+        max-width: calc(100% + var(--cont_padding_double));
+        margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+
+    /*---------------
+        Materials
+    ---------------*/
+    .materials .data
+    {
+        margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+
+    /*---------------
+        Lets make
+    ---------------*/
+    .lets_make .title span
+    {
+        font-size: 38px;
+    }
+}
