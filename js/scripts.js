@@ -24,16 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			},
 			spaceBetween: 0,
 			slidesPerView: 1,
-			on: {
-				init: swiper => setHeight(swiper.el.querySelectorAll('.case')),
-				resize: swiper => {
-					let items = swiper.el.querySelectorAll('..case')
-
-					items.forEach(el => el.style.height = 'auto')
-
-					setHeight(items)
-				}
-			}
+			autoHeight: true,
 		}
 
 		casesSliders.push(new Swiper('.cases_s' + i, options))

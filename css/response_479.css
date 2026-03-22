@@ -12,6 +12,15 @@
     }
 
 
+    .swiper-button-next,
+    .swiper-button-prev
+    {
+        height: 40px;
+
+        --swiper-navigation-size: 80px;
+    }
+
+
 
     /*---------------
         Accordion
@@ -128,6 +137,12 @@
     .cases .swiper
     {
         margin-inline: calc(var(--cont_padding) * -1);
+    }
+
+
+    .cases .case .data
+    {
+        padding-block: var(--block_padding_l) 92px;
     }
 
 
