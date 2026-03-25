@@ -321,4 +321,17 @@
         width: 768px;
         margin-left: -480px;
     }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .cont
+    {
+        flex-direction: column;
+        justify-content: center;
+
+        text-align: center;
+    }
 }

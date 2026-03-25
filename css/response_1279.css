@@ -544,4 +544,14 @@
         width: 1000px;
         margin-left: -600px;
     }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    footer .creator
+    {
+        width: 100%;
+    }
 }

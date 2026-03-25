@@ -629,8 +629,8 @@ header .menu .item > a .arr
 }
 
 
-header .menu .item:hover > a,
-header .menu .item > a.active
+header .menu .item:hover > a:not(.mark),
+header .menu .item > a:not(.mark).active
 {
     color: var(--primary_color);
 }
@@ -3009,4 +3009,53 @@ header .menu .item > a.active
 {
     color: var(--light_color);
     background: var(--primary_color);
+}
+
+
+
+/*------------
+    Footer
+------------*/
+footer
+{
+    position: relative;
+
+    padding-block: var(--inner_gap_m);
+
+    z-index: 3;
+
+    color: var(--grey_color);
+}
+
+
+footer .cont
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: var(--inner_gap);
+}
+
+
+footer a
+{
+    transition: color .2s linear;
+    text-decoration: none;
+
+    color: currentColor;
+}
+
+
+footer a:hover
+{
+    color: var(--primary_color);
+}
+
+
+footer .creator span
+{
+    color: var(--dark_color);
 }
