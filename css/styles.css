@@ -25,6 +25,7 @@
     --font_size_s: 14px;
     --font_size_xs: 12px;
     --font_size_title_l: 63px;
+    --font_size_title_m: 44px;
     --font_size_title: 40px;
     --font_size_title_s: 32px;
     --font_size_title_xs: 24px;
@@ -889,9 +890,47 @@ header .menu .item > a:not(.mark).active
 }
 
 
+.block_head .title.middle
+{
+    font-size: var(--font_size_title_m);
+}
+
+
+.block_head .title.middle span
+{
+    font-size: 62px;
+}
+
+
 .block_head .title.small
 {
     font-size: var(--font_size_title_s);
+}
+
+
+.block_head .sub_title
+{
+    display: flex;
+    flex-direction: column;
+
+    font-size: calc(var(--font_size_l) - 1px);
+    line-height: 110%;
+
+    text-transform: uppercase;
+
+    gap: var(--inner_gap_xs);
+}
+
+
+.block_head .sub_title span
+{
+    font-family: var(--font_family2);
+    font-size: calc(var(--font_size_xl) + 2px);
+    font-style: italic;
+
+    text-transform: none;
+
+    color: var(--primary_color);
 }
 
 
@@ -2150,7 +2189,7 @@ header .menu .item > a:not(.mark).active
 
 .steps .block_head
 {
-    gap: 4px;
+    gap: var(--inner_gap_xs);
 }
 
 
@@ -2292,9 +2331,44 @@ header .menu .item > a:not(.mark).active
 }
 
 
+.guarantees .row
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: var(--block_padding_xl);
+}
+
+
+.guarantees .row .block_head
+{
+    width: 420px;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+
+.guarantees .row .data
+{
+    width: calc(100% - 420px - var(--block_padding_xl));
+    padding: 0;
+}
+
+
 .guarantees .grid_row
 {
     --gap_y: var(--outside_gap);
+}
+
+
+.guarantees .row .grid_row
+{
+    --items_per_line: 2;
+    --gap_x: var(--block_padding);
+    --gap_y: var(--block_padding_l);
 }
 
 
@@ -3006,6 +3080,999 @@ header .menu .item > a:not(.mark).active
 
 
 .lets_make .btns .btn.outlined:hover
+{
+    color: var(--light_color);
+    background: var(--primary_color);
+}
+
+
+
+/*-------------------
+    Wedding rings
+-------------------*/
+.wedding_rings .block_head
+{
+    gap: var(--inner_gap);
+}
+
+
+
+.wedding_rings .advantages .grid_row
+{
+    --items_per_line: 4;
+}
+
+
+.wedding_rings .advantages .item
+{
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: var(--inner_gap_s);
+
+    text-align: center;
+}
+
+
+.wedding_rings .advantages .item .image
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 116px;
+    margin-inline: auto;
+    margin-bottom: var(--inner_gap_s);
+
+    border-radius: 50%;
+    background: var(--light_color);
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.wedding_rings .advantages .item .image img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: inherit;
+}
+
+
+.wedding_rings .advantages .item .name
+{
+    font-size: var(--font_size_xl);
+    line-height: 110%;
+
+    text-transform: uppercase;
+}
+
+
+.wedding_rings .advantages .item .desc
+{
+    margin-top: 16px;
+
+    line-height: 110%;
+
+    opacity: .5;
+}
+
+
+
+.wedding_rings .features
+{
+    margin-top: var(--inner_gap_m);
+    padding-block: var(--block_padding);
+    padding-inline: var(--block_padding_xl);
+
+    background: var(--light_color);
+}
+
+
+.wedding_rings .features .grid_row
+{
+    --items_per_line: 2;
+    --gap_x: var(--inner_gap);
+    --gap_y: var(--block_padding);
+}
+
+
+.wedding_rings .features .item
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-size: calc(var(--font_size_l) - 1px);
+    line-height: 110%;
+
+    gap: var(--inner_gap);
+}
+
+
+.wedding_rings .features .label
+{
+    width: 239px;
+    max-width: 100%;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+.wedding_rings .features .val
+{
+    width: calc(100% - 239px - var(--inner_gap));
+}
+
+
+
+.wedding_rings .images
+{
+    margin-top: var(--inner_gap);
+}
+
+
+.wedding_rings .images .grid_row
+{
+    --items_per_line: 5;
+    --gap_x: 15px;
+    --gap_y: 15px;
+}
+
+
+.wedding_rings .images .image
+{
+    display: block;
+}
+
+
+.wedding_rings .images .image img
+{
+    display: block;
+
+    width: 100%;
+}
+
+
+
+.wedding_rings .btns
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: var(--block_padding_xl);
+
+    gap: var(--inner_gap_s);
+}
+
+
+.wedding_rings .btns .btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 420px;
+    max-width: calc(50% - var(--inner_gap_s) / 2);
+    height: 87px;
+    padding-inline: var(--block_padding_xl);
+
+    font-size: var(--font_size_s);
+    line-height: 110%;
+
+    transition: .2s linear;
+    text-transform: uppercase;
+
+    color: var(--light_color);
+    background: var(--dark_color);
+
+    gap: var(--inner_gap);
+}
+
+
+.wedding_rings .btns .btn.outlined
+{
+    justify-content: space-between;
+
+    color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+    background: none;
+}
+
+
+.wedding_rings .btns .btn.outlined span
+{
+    max-width: calc(100% - 22px - var(--inner_gap));
+}
+
+
+.wedding_rings .btns .btn.outlined .icon
+{
+    display: block;
+
+    width: 22px;
+    height: 8px;
+}
+
+
+.wedding_rings .btns .btn:hover,
+.wedding_rings .btns .btn.outlined:hover
+{
+    color: var(--light_color);
+    background: var(--primary_color);
+}
+
+
+
+/*---------------------
+    Why custom made
+---------------------*/
+.why_custom_made .data
+{
+    position: relative;
+
+    overflow: hidden;
+
+    padding: var(--block_padding_l);
+
+    background: rgba(204, 204, 204, .4);
+}
+
+
+.why_custom_made .data > *
+{
+    position: relative;
+
+    z-index: 3;
+}
+
+
+.why_custom_made .block_head
+{
+    gap: 16px;
+}
+
+
+.why_custom_made .block_head .sub_title
+{
+    font-family: var(--font_family2);
+}
+
+
+.why_custom_made .grid_row
+{
+    --items_per_line: 4;
+}
+
+
+.why_custom_made .item
+{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+.why_custom_made .item .image
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 116px;
+    margin-inline: auto;
+    margin-bottom: var(--inner_gap_s);
+
+    border-radius: 50%;
+    background: var(--light_color);
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.why_custom_made .item .image img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: inherit;
+}
+
+
+.why_custom_made .item .name
+{
+    font-size: var(--font_size_xl);
+    line-height: 110%;
+
+    text-transform: uppercase;
+}
+
+
+.why_custom_made .item .desc
+{
+    margin-top: 16px;
+
+    line-height: 110%;
+
+    opacity: .5;
+}
+
+
+.why_custom_made .bg
+{
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+
+    width: 1300px;
+    margin-bottom: -162px;
+
+    z-index: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+
+.why_custom_made .bg img
+{
+    display: block;
+
+    width: 100%;
+}
+
+
+
+/*------------
+    Cases2
+------------*/
+.cases2 .images
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    margin-bottom: var(--inner_gap_l);
+
+    gap: 15px;
+}
+
+
+.cases2 .images .image,
+.cases2 .images .image img
+{
+    display: block;
+}
+
+
+
+.cases2 .grid_row
+{
+    margin-top: var(--inner_gap_l);
+
+    --gap_x: var(--inner_gap_l);
+    --gap_y: var(--inner_gap_l);
+}
+
+
+.cases2 .case
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    background: var(--light_color);
+}
+
+
+.cases2 .case .thumb
+{
+    display: block;
+
+    width: 178px;
+    max-width: 100%;
+    min-height: 266px;
+}
+
+
+.cases2 .case .info
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: calc(100% - 178px);
+    padding: var(--block_padding);
+
+    font-size: calc(var(--font_size_l) - 1px);
+    line-height: 110%;
+
+    gap: var(--block_padding);
+}
+
+
+.cases2 .case .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 33px;
+
+    color: var(--primary_color);
+    border-radius: 50%;
+    background: #f2f2f2;
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.cases2 .case .icon svg
+{
+    display: block;
+
+    width: 8px;
+    height: 15px;
+}
+
+
+
+/*------------
+    Styles
+------------*/
+.styles .block_head
+{
+    gap: var(--inner_gap_s);
+}
+
+
+.styles .grid_row
+{
+    --items_per_line: 4;
+    --gap_x: var(--inner_gap_m);
+    --gap_y: var(--block_padding_xl);
+}
+
+
+.styles .item
+{
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 16px;
+}
+
+
+.styles .item .image
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 117px;
+    margin-inline: auto;
+
+    border-radius: 50%;
+    background: var(--light_color);
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.styles .item .image img
+{
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    border-radius: inherit;
+}
+
+
+.styles .item .name
+{
+    flex: 1 0 auto;
+
+    font-family: var(--font_family2);
+    font-size: var(--font_size_xl);
+    line-height: 1;
+
+    letter-spacing: .32px;
+    text-transform: uppercase;
+}
+
+
+.styles .item .desc
+{
+    font-size: calc(var(--font_size_l) - 1px);
+    line-height: 110%;
+
+    opacity: .5;
+}
+
+
+.styles .send_photo
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: var(--block_padding);
+
+    font-family: var(--font_family2);
+    font-size: var(--font_size_xl);
+    line-height: 1;
+
+    text-align: center;
+    letter-spacing: .32px;
+    text-transform: uppercase;
+
+    color: var(--light_color);
+    background: var(--primary_color);
+}
+
+
+.styles .btns
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: var(--outside_gap_s);
+
+    gap: var(--inner_gap_s);
+}
+
+
+.styles .btns .btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 420px;
+    max-width: calc(50% - var(--inner_gap_s) / 2);
+    height: 87px;
+    padding-inline: var(--block_padding_xl);
+
+    font-size: var(--font_size_s);
+    line-height: 110%;
+
+    transition: .2s linear;
+    text-transform: uppercase;
+
+    color: var(--light_color);
+    background: var(--dark_color);
+
+    gap: var(--inner_gap);
+}
+
+
+.styles .btns .btn.outlined
+{
+    justify-content: space-between;
+
+    color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+    background: none;
+}
+
+
+.styles .btns .btn.outlined span
+{
+    max-width: calc(100% - 22px - var(--inner_gap));
+}
+
+
+.styles .btns .btn.outlined .icon
+{
+    display: block;
+
+    width: 22px;
+    height: 8px;
+}
+
+
+.styles .btns .btn:hover,
+.styles .btns .btn.outlined:hover
+{
+    color: var(--light_color);
+    background: var(--primary_color);
+}
+
+
+
+/*--------------------
+    Price included
+--------------------*/
+.price_included .data
+{
+    display: flex;
+    flex-direction: column;
+
+    padding-block: 60px 52px;
+    padding-inline: var(--block_padding_xl);
+
+    color: var(--light_color);
+    background: var(--bg_black);
+
+    gap: var(--block_padding_l);
+}
+
+
+.price_included .head
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.price_included .block_head
+{
+    width: 620px;
+    max-width: 100%;
+    margin-bottom: 0;
+
+    gap: 16px;
+}
+
+
+.price_included .price
+{
+    display: flex;
+    flex-direction: column;
+
+    font-size: var(--font_size_l);
+    line-height: 130%;
+
+    text-align: right;
+
+    gap: 15px;
+}
+
+
+.price_included .price .val
+{
+    font-family: var(--font_family2);
+    font-size: var(--font_size_title);
+    line-height: 1;
+
+    letter-spacing: .32px;
+    text-transform: uppercase;
+}
+
+
+.price_included .price .nds
+{
+    font-family: var(--font_family2);
+    font-size: calc(var(--font_size_title_xs) - 2px);
+    font-style: italic;
+    line-height: 110%;
+
+    color: var(--primary_color);
+}
+
+
+.price_included .items
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    font-family: var(--font_family2);
+    font-size: calc(var(--font_size_xl) - 1px);
+    line-height: 110%;
+
+    counter-reset: number;
+    text-transform: uppercase;
+
+    gap: var(--inner_gap);
+}
+
+
+.price_included .items > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 16px;
+}
+
+
+.price_included .items .number
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 43px;
+
+    font-size: var(--font_size);
+    line-height: 130%;
+
+    text-align: center;
+
+    border-radius: 50%;
+    background: var(--primary_color);
+
+    aspect-ratio: 1 / 1;
+}
+
+
+.price_included .items .number:before
+{
+    content: counter(number);
+    counter-increment: number;
+}
+
+
+.price_included .items .number + *
+{
+    width: calc(100% - 40px - 16px);
+}
+
+
+.price_included .exp
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: var(--block_padding_l);
+
+    font-size: var(--font_size_l);
+    line-height: 130%;
+
+    text-align: center;
+
+    gap: var(--inner_gap_s);
+}
+
+
+.price_included .exp small
+{
+    font-size: calc(var(--font_size_s) - 1px);
+    line-height: 130%;
+
+    opacity: .7;
+}
+
+
+
+/*--------------------
+    Contacts block
+--------------------*/
+.contacts_block .row
+{
+    display: flex;
+    align-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: var(--inner_gap_l);
+}
+
+
+.contacts_block .data
+{
+    display: flex;
+    flex-direction: column;
+
+    width: calc(100% - 607px - var(--inner_gap_l));
+    padding-block: var(--block_padding_l) var(--inner_gap_m);
+    padding-inline: 75px;
+
+    background: var(--light_color);
+
+    gap: var(--block_padding_xl);
+}
+
+
+.contacts_block .item
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: var(--inner_gap_s);
+}
+
+
+.contacts_block .item .label
+{
+    font-family: var(--font_family2);
+    font-size: var(--font_size_l);
+    line-height: 110%;
+
+    text-transform: uppercase;
+
+    color: var(--primary_color);
+}
+
+
+.contacts_block .item .val
+{
+    display: flex;
+    flex-direction: column;
+
+    width: 520px;
+    max-width: 100%;
+
+    font-size: var(--font_size_l);
+    line-height: 110%;
+
+    gap: var(--inner_gap);
+}
+
+
+.contacts_block .exp
+{
+    width: 100%;
+
+    font-size: calc(var(--font_size_s) - 1px);
+    line-height: 110%;
+
+    text-align: center;
+
+    opacity: .5;
+}
+
+
+.contacts_block .map
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 607px;
+    max-width: 100%;
+
+    background: var(--bg_grey);
+}
+
+
+
+/*---------
+    FAQ
+---------*/
+.FAQ .cont.row
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    gap: var(--block_padding_xl);
+}
+
+
+.FAQ .cont.row .block_head
+{
+    width: 420px;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+
+.FAQ .cont.row .accordion
+{
+    width: calc(100% - 420px - var(--block_padding_xl));
+}
+
+
+
+/*---------------
+    Get quote
+---------------*/
+.get_quote .data
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 60px;
+
+    background: #fafafa;
+}
+
+
+.get_quote .block_head
+{
+    margin-bottom: 0;
+}
+
+
+.get_quote .btn
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 420px;
+    max-width: 100%;
+    height: 87px;
+    padding-inline: var(--block_padding_xl);
+
+    font-size: var(--font_size_s);
+    line-height: 110%;
+
+    transition: .2s linear;
+    text-transform: uppercase;
+
+    color: var(--primary_color);
+    border: 1px solid var(--primary_color);
+
+    gap: var(--inner_gap);
+}
+
+
+.get_quote .btn span
+{
+    max-width: calc(100% - 22px - var(--inner_gap));
+}
+
+
+.get_quote .btn .icon
+{
+    display: block;
+
+    width: 22px;
+    height: 8px;
+}
+
+
+.get_quote .btn:hover
 {
     color: var(--light_color);
     background: var(--primary_color);

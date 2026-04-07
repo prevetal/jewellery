@@ -6,6 +6,7 @@
     :root
     {
         --font_size_title_l: 33px;
+        --font_size_title_m: 32px;
         --font_size_title: 30px;
         --font_size_title_s: 26px;
         --font_size_title_xs: 22px;
@@ -38,6 +39,12 @@
     .block_head .title.big span
     {
         font-size: 50px;
+    }
+
+
+    .block_head .title.middle span
+    {
+        font-size: 47px;
     }
 
 
@@ -175,5 +182,168 @@
     .lets_make .title span
     {
         font-size: 38px;
+    }
+
+
+
+    /*-------------------
+        Wedding rings
+    -------------------*/
+    .wedding_rings .features
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+
+    .wedding_rings .images .grid_row > *
+    {
+        width: 180px;
+    }
+
+
+
+    .wedding_rings .btns .btn
+    {
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+
+    /*---------------------
+        Why custom made
+    ---------------------*/
+    .why_custom_made .data
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+
+    /*------------
+        Cases2
+    ------------*/
+    .cases2 .images .image img
+    {
+        height: 200px;
+    }
+
+
+    .cases2 .grid_row > *
+    {
+        width: 300px;
+    }
+
+
+    .cases2 .case .thumb
+    {
+        width: 120px;
+        min-height: 188px;
+    }
+
+
+    .cases2 .case .info
+    {
+        width: calc(100% - 120px);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+
+    /*------------
+        Styles
+    ------------*/
+    .styles .item .image
+    {
+        width: 100px;
+    }
+
+
+    .styles .item .desc
+    {
+        font-size: var(--font_size_s);
+    }
+
+
+    .styles .send_photo
+    {
+        --width_multiplier: 2px;
+    }
+
+
+    .styles .btns .btn
+    {
+        padding-inline: var(--inner_gap_l);
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .data
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .price_included .items .number
+    {
+        width: 40px;
+    }
+
+
+    .price_included .items .number + *
+    {
+        width: calc(100% - 40px - 16px);
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .data,
+    .contacts_block .map
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        max-width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .cont.row .accordion
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+    }
+
+
+
+    /*---------------
+        Get quote
+    ---------------*/
+    .get_quote .data
+    {
+        width: calc(100% + var(--cont_padding) * 2);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .get_quote .btn
+    {
+        padding-inline: var(--inner_gap_l);
     }
 }

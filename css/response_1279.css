@@ -547,6 +547,297 @@
 
 
 
+    /*-------------------
+        Wedding rings
+    -------------------*/
+    .wedding_rings .advantages .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .wedding_rings .advantages .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .wedding_rings .advantages .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .wedding_rings .advantages .grid_row > *
+    {
+        width: 280px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .wedding_rings .advantages .item
+    {
+        padding-bottom: 0;
+    }
+
+
+    .wedding_rings .advantages .item .image
+    {
+        width: 112px;
+        margin-bottom: var(--inner_gap_s);
+    }
+
+
+
+    .wedding_rings .features
+    {
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .wedding_rings .features .item
+    {
+        gap: var(--inner_gap_xs);
+    }
+
+
+    .wedding_rings .features .label,
+    .wedding_rings .features .val
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------------
+        Why custom made
+    ---------------------*/
+    .why_custom_made .data
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .why_custom_made .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .why_custom_made .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .why_custom_made .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .why_custom_made .grid_row > *
+    {
+        width: 280px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------
+        Cases2
+    ------------*/
+    .cases2 .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--inner_gap);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .cases2 .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .cases2 .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .cases2 .grid_row > *
+    {
+        width: 400px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*------------
+        Styles
+    ------------*/
+    .styles .send_photo
+    {
+        padding: var(--inner_gap_m);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .row .block_head
+    {
+        width: 360px;
+    }
+
+
+    .guarantees .row .data
+    {
+        width: calc(100% - 360px - var(--block_padding_xl));
+    }
+
+
+    .guarantees .row .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--inner_gap_m);
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .data
+    {
+        padding-block: var(--block_padding_l);
+    }
+
+
+    .price_included .block_head
+    {
+        width: 500px;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .data
+    {
+        width: calc(100% - 400px - var(--inner_gap));
+        padding-block: var(--block_padding_l) var(--inner_gap_m);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .contacts_block .map
+    {
+        width: 400px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .cont.row
+    {
+        gap: var(--block_padding_l);
+    }
+
+
+    .FAQ .cont.row .block_head
+    {
+        width: 360px;
+    }
+
+
+    .FAQ .cont.row .accordion
+    {
+        width: calc(100% - 360px - var(--block_padding_l));
+    }
+
+
+
+    /*---------------
+        Get quote
+    ---------------*/
+    .get_quote .data
+    {
+        padding: var(--block_padding_l);
+    }
+
+
+    .get_quote .block_head
+    {
+        width: calc(100% - 400px - var(--block_padding_l));
+    }
+
+
+
     /*------------
         Footer
     ------------*/

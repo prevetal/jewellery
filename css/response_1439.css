@@ -113,6 +113,12 @@
     }
 
 
+    .block_head .sub_title
+    {
+        font-size: var(--font_size);
+    }
+
+
     .block_head .desc.big
     {
         font-size: var(--font_size_title_xs);
@@ -590,5 +596,223 @@
 
         width: 1120px;
         margin-left: -680px;
+    }
+
+
+
+    /*-------------------
+        Wedding rings
+    -------------------*/
+    .wedding_rings .features .item
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .wedding_rings .features .label
+    {
+        width: 200px;
+    }
+
+
+    .wedding_rings .features .val
+    {
+        width: calc(100% - 200px - var(--inner_gap));
+    }
+
+
+    .wedding_rings .images .grid_row
+    {
+        --gap_x: var(--inner_gap_s);
+        --gap_y: var(--inner_gap_s);
+    }
+
+
+    .wedding_rings .btns .btn
+    {
+        width: 400px;
+        height: 80px;
+    }
+
+
+
+    /*------------
+        Cases2
+    ------------*/
+    .cases2 .images
+    {
+        margin-bottom: var(--inner_gap);
+
+        gap: var(--inner_gap_s);
+    }
+
+
+    .cases2 .grid_row
+    {
+        margin-top: var(--inner_gap);
+
+        --gap_x: var(--inner_gap);
+        --gap_y: var(--inner_gap);
+    }
+
+
+    .cases2 .case .thumb
+    {
+        width: 160px;
+        min-height: 240px;
+    }
+
+
+    .cases2 .case .info
+    {
+        width: calc(100% - 160px);
+        padding: var(--block_padding_s);
+
+        font-size: var(--font_size);
+
+        gap: var(--block_padding_s);
+    }
+
+
+
+    /*------------
+        Styles
+    ------------*/
+    .styles .item .desc
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .styles .btns .btn
+    {
+        width: 400px;
+        height: 80px;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .row .block_head
+    {
+        width: 368px;
+    }
+
+
+    .guarantees .row .data
+    {
+        width: calc(100% - 368px - var(--block_padding_xl));
+    }
+
+
+    .guarantees .row .grid_row
+    {
+        --gap_x: var(--inner_gap_m);
+        --gap_y: var(--block_padding);
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .data
+    {
+        padding-block: var(--block_padding_xl);
+    }
+
+
+    .price_included .price
+    {
+        gap: var(--inner_gap_s);
+    }
+
+
+    .price_included .items
+    {
+        font-size: var(--font_size);
+    }
+
+
+    .price_included .exp small
+    {
+        font-size: var(--font_size_xs);
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .row
+    {
+        gap: var(--inner_gap);
+    }
+
+
+    .contacts_block .data
+    {
+        width: calc(100% - 560px - var(--inner_gap));
+        padding-block: var(--block_padding_xl) var(--inner_gap_m);
+        padding-inline: var(--block_padding_xl);
+    }
+
+
+    .contacts_block .exp
+    {
+        font-size: var(--font_size_xs);
+    }
+
+
+    .contacts_block .map
+    {
+        width: 560px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .cont.row .block_head
+    {
+        width: 368px;
+    }
+
+
+    .FAQ .cont.row .block_head br
+    {
+        display: none;
+    }
+
+
+    .FAQ .cont.row .accordion
+    {
+        width: calc(100% - 368px - var(--block_padding_xl));
+    }
+
+
+
+    /*---------------
+        Get quote
+    ---------------*/
+    .get_quote .data
+    {
+        padding: var(--block_padding_xl);
+    }
+
+
+    .get_quote .block_head
+    {
+        width: calc(100% - 400px - var(--block_padding_xl));
+    }
+
+
+    .get_quote .btn
+    {
+        width: 400px;
+        height: 80px;
     }
 }

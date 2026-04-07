@@ -324,6 +324,140 @@
 
 
 
+    /*-------------------
+        Wedding rings
+    -------------------*/
+    .wedding_rings
+    {
+        padding-top: var(--inner_gap_l);
+    }
+
+
+    .wedding_rings .features .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+    .wedding_rings .features .item
+    {
+        text-align: center;
+    }
+
+
+    .wedding_rings .images .grid_row > *
+    {
+        width: 192px;
+    }
+
+
+    .wedding_rings .btns
+    {
+        margin-top: var(--inner_gap_m);
+    }
+
+
+    .wedding_rings .btns .btn
+    {
+        width: 100%;
+        max-width: 100%;
+        height: 68px;
+    }
+
+
+
+    /*------------
+        Cases2
+    ------------*/
+    .cases2 .images .image img
+    {
+        height: 220px;
+    }
+
+
+    .cases2 .grid_row > *
+    {
+        width: 360px;
+    }
+
+
+    .cases2 .case .thumb
+    {
+        width: 152px;
+        min-height: 228px;
+    }
+
+
+    .cases2 .case .info
+    {
+        width: calc(100% - 152px);
+    }
+
+
+
+    /*------------
+        Styles
+    ------------*/
+    .styles .grid_row
+    {
+        --items_per_line: 2;
+    }
+
+
+    .styles .send_photo
+    {
+        --width_multiplier: 1;
+    }
+
+
+    .styles .btns .btn
+    {
+        width: 100%;
+        max-width: 100%;
+        height: 68px;
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .row .grid_row
+    {
+        --items_per_line: 1;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .item .val
+    {
+        width: 100%;
+
+        font-size: var(--font_size);
+    }
+
+
+    .contacts_block .map
+    {
+        height: 360px;
+    }
+
+
+
+    /*---------------
+        Get quote
+    ---------------*/
+    .get_quote .btn
+    {
+        width: 100%;
+        height: 68px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/

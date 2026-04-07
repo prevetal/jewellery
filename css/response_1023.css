@@ -7,6 +7,7 @@
     :root
     {
         --font_size_title_l: 40px;
+        --font_size_title_m: 38px;
         --font_size_title: 36px;
         --font_size_title_s: 28px;
         --font_size_title_xs: 22px;
@@ -30,6 +31,12 @@
     .block_head .title.big span
     {
         font-size: 58px;
+    }
+
+
+    .block_head .title.middle span
+    {
+        font-size: 54px;
     }
 
 
@@ -333,6 +340,235 @@
     .lets_make .btns .btn
     {
         width: 100%;
+    }
+
+
+
+    /*-------------------
+        Wedding rings
+    -------------------*/
+    .wedding_rings .block_head .title br
+    {
+        display: none;
+    }
+
+
+
+    .wedding_rings .images .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_s);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .wedding_rings .images .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .wedding_rings .images .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .wedding_rings .images .grid_row > *
+    {
+        width: 240px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    .wedding_rings .btns .btn
+    {
+        padding-inline: var(--block_padding_l);
+    }
+
+
+
+    /*------------
+        Cases2
+    ------------*/
+    .cases2 .images
+    {
+        display: grid;
+        overflow: auto;
+
+        margin-block: 0 var(--inner_gap);
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap_s);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+
+    .cases2 .images .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .cases2 .images .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .cases2 .images .image
+    {
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+    .cases2 .images .image img
+    {
+        height: 240px;
+    }
+
+
+
+    /*------------
+        Styles
+    ------------*/
+    .styles .grid_row
+    {
+        --items_per_line: 3;
+    }
+
+
+    .styles .send_photo
+    {
+        --width_multiplier: 2;
+    }
+
+
+    .styles .btns
+    {
+        margin-top: var(--block_padding_l);
+    }
+
+
+
+    /*----------------
+        Guarantees
+    ----------------*/
+    .guarantees .row
+    {
+        gap: var(--block_padding_l);
+    }
+
+
+    .guarantees .row .block_head
+    {
+        width: 100%;
+    }
+
+
+    .guarantees .row .data
+    {
+        width: 100%;
+    }
+
+
+
+    /*--------------------
+        Price included
+    --------------------*/
+    .price_included .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+
+        text-align: center;
+    }
+
+
+    .price_included .price
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+
+    /*--------------------
+        Contacts block
+    --------------------*/
+    .contacts_block .data
+    {
+        width: 100%;
+    }
+
+
+    .contacts_block .map
+    {
+        width: 100%;
+        height: 440px;
+    }
+
+
+
+    /*---------
+        FAQ
+    ---------*/
+    .FAQ .cont.row .block_head,
+    .FAQ .cont.row .accordion
+    {
+        width: 100%;
+    }
+
+
+
+    /*---------------
+        Get quote
+    ---------------*/
+    .get_quote .block_head
+    {
+        width: 100%;
+        margin-bottom: var(--block_head_offset);
+
+        text-align: center;
+    }
+
+
+    .get_quote .btn
+    {
+        margin-inline: auto;
     }
 
 
