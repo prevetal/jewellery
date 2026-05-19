@@ -815,4 +815,155 @@
         width: 400px;
         height: 80px;
     }
+
+
+
+    /*-----------
+        Promo
+    -----------*/
+    .promo .banner .info
+    {
+        min-height: 540px;
+        padding-block: 100px 72px;
+    }
+
+
+    .promo .banner .link
+    {
+        height: 50px;
+    }
+
+
+
+    .promo .collection .image
+    {
+        min-height: 720px;
+    }
+
+
+    .promo .collection .data
+    {
+        padding: var(--block_padding);
+    }
+
+
+    .promo .collection .info
+    {
+        padding: var(--block_padding);
+    }
+
+
+    .promo .collection .swiper-horizontal > .swiper-pagination-bullets,
+    .promo .collection .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .promo .collection .swiper-pagination-custom,
+    .promo .collection .swiper-pagination-fraction
+    {
+        margin-top: var(--block_padding);
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info
+    {
+        margin-bottom: var(--block_padding);
+    }
+
+
+    .about_info .head
+    {
+        min-height: 540px;
+        padding-block: 100px 80px;
+    }
+
+
+    .about_info .head .btn
+    {
+        height: 50px;
+    }
+
+
+    .about_info .links a
+    {
+        min-height: 88px;
+
+        font-size: 26px;
+    }
+
+
+    .about_info .description
+    {
+        padding-block: var(--inner_gap);
+    }
+
+
+
+    /*----------------
+        Boss quote
+    ----------------*/
+    .boss_quote
+    {
+        margin-bottom: var(--block_padding);
+    }
+
+
+    .boss_quote .data
+    {
+        min-height: 460px;
+        padding-block: var(--block_padding_xl);
+        padding-inline: var(--block_padding_xl);
+    }
+
+
+    .boss_quote .info
+    {
+        width: 568px;
+    }
+
+
+
+    /*------------------
+        Request form
+    ------------------*/
+    .request_form .data
+    {
+        padding-block: var(--block_padding_xl);
+        padding-inline: var(--block_padding_xl);
+
+        gap: var(--block_padding_l);
+    }
+
+
+    .request_form .title
+    {
+        width: 276px;
+
+        font-size: 20px;
+    }
+
+
+    .request_form .form
+    {
+        width: 720px;
+        max-width: calc(100% - 276px - var(--block_padding_l));
+    }
+
+
+    .request_form .form .submit_btn
+    {
+        height: 50px;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    .footer .contacts,
+    .footer .creator
+    {
+        width: 226px;
+    }
 }

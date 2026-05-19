@@ -31,6 +31,47 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Collection slider
+	const collectionSliders = [],
+		collection = document.querySelectorAll('.collection .swiper')
+
+	collection.forEach((el, i) => {
+		el.classList.add('collection_s' + i)
+
+		let options = {
+			loop: true,
+			loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			lazy: true,
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev'
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'bullets',
+				clickable: true,
+				bulletActiveClass: 'active'
+			},
+			spaceBetween: 20,
+			slidesPerView: 1,
+			on: {
+				init: swiper => {
+					setTimeout(() => $(swiper.el).find('.count .total').text(swiper.slides.length))
+				},
+				activeIndexChange: swiper => {
+					setTimeout(() => $(swiper.el).find('.count .current').text((swiper.realIndex + 1)))
+				},
+			}
+		}
+
+		collectionSliders.push(new Swiper('.collection_s' + i, options))
+	})
+
+
 	// Mob. menu
 	$('.mob_header .mob_menu_btn').click((e) => {
 		e.preventDefault()

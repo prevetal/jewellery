@@ -573,11 +573,212 @@
 
 
 
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .grid_row
+    {
+        display: grid;
+        overflow: auto;
+
+        width: calc(100% + var(--cont_padding_double));
+        margin-block: 0;
+        margin-inline: calc(var(--cont_padding) * -1);
+        padding-inline: var(--cont_padding);
+
+        gap: var(--inner_gap);
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+        scroll-padding: 0 var(--cont_padding);
+        scroll-snap-type: x mandatory;
+        scrollbar-color: transparent transparent;
+        scrollbar-width: thin;
+    }
+
+    .catalog .grid_row::-webkit-scrollbar
+    {
+        display: none;
+
+        width: 0;
+        height: 0;
+
+        background-color: transparent;
+    }
+
+
+    .catalog .grid_row::-webkit-scrollbar-thumb
+    {
+        background-color: transparent;
+    }
+
+
+    .catalog .grid_row > *
+    {
+        width: 260px;
+        margin: 0;
+
+        scroll-snap-align: start;
+    }
+
+
+
+    /*-----------
+        Promo
+    -----------*/
+    .promo .collection .image
+    {
+        width: 100%;
+        height: 480px;
+        min-height: 0;
+    }
+
+
+    .promo .collection .data
+    {
+        order: 2;
+
+        width: 100%;
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .promo .collection .swiper
+    {
+        order: 2;
+    }
+
+
+    .promo .collection .info
+    {
+        position: relative;
+
+        padding-inline: var(--cont_padding);
+        padding-top: var(--inner_gap_s);
+    }
+
+
+
+    .promo .gallery .grid_row
+    {
+        padding-inline: 0;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head .desc
+    {
+        font-size: var(--font_size_s);
+    }
+
+
+    .about_info .links a
+    {
+        min-height: 72px;
+
+        font-size: 20px;
+    }
+
+
+    .about_info .description
+    {
+        font-size: var(--font_size_xs);
+    }
+
+
+
+    /*----------------
+        Boss quote
+    ----------------*/
+    .boss_quote .info
+    {
+        width: 400px;
+    }
+
+
+    .boss_quote .quote
+    {
+        padding-left: var(--block_padding_xl);
+    }
+
+
+    .boss_quote .quote:before
+    {
+        right: auto;
+        left: 0;
+    }
+
+
+
+    /*------------------
+        Request form
+    ------------------*/
+    .request_form .title
+    {
+        width: 100%;
+    }
+
+
+    .request_form .form
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
     footer .requisites
     {
         width: 100%;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    .footer .col
+    {
+        width: 100%;
+        margin-bottom: var(--block_padding_l);
+    }
+
+
+    .footer .logo img
+    {
+        margin-inline: auto;
+    }
+
+
+    .footer .desc
+    {
+        margin-top: var(--inner_gap);
+
+        text-align: center;
+    }
+
+
+    .footer .links
+    {
+        width: 160px;
+        max-width: 100%;
+    }
+
+
+    .footer .links .items
+    {
+        max-width: none;
+    }
+
+
+    .footer .copyright,
+    .footer .creator
+    {
+        font-size: var(--font_size_s);
     }
 }

@@ -346,4 +346,143 @@
     {
         padding-inline: var(--inner_gap_l);
     }
+
+
+
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .grid_row > *
+    {
+        width: 220px;
+    }
+
+
+
+    /*-----------
+        Promo
+    -----------*/
+    .promo .banner .info
+    {
+        padding-block: 48px 40px;
+    }
+
+
+    .promo .banner .title
+    {
+        font-size: 33px;
+    }
+
+
+    .promo .banner .title span,
+    .promo .banner .desc
+    {
+        margin-left: 32px !important;
+    }
+
+
+    .promo .banner .link
+    {
+        width: 100%;
+    }
+
+
+
+    .promo .collection .image
+    {
+        height: 320px;
+    }
+
+
+
+    .promo .gallery .grid_row > *
+    {
+        width: 200px;
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head
+    {
+        padding-block: 48px 40px;
+    }
+
+
+
+    /*----------------
+        Boss quote
+    ----------------*/
+    .boss_quote .cont
+    {
+        padding: 0;
+    }
+
+
+    .boss_quote .data
+    {
+        padding-inline: var(--cont_padding);
+    }
+
+
+    .boss_quote .info .name,
+    .boss_quote .info .desc
+    {
+        width: 268px;
+        max-width: 100%;
+    }
+
+
+    .boss_quote .quote
+    {
+        padding-top: 52px;
+        padding-left: 0;
+    }
+
+
+    .boss_quote .quote:before
+    {
+        top: 0;
+        bottom: auto;
+
+        width: 40px;
+        height: 32px;
+    }
+
+
+
+    /*------------------
+        Request form
+    ------------------*/
+    .request_form .data
+    {
+        padding-inline: var(--inner_gap_m);
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    .footer .title
+    {
+        margin-bottom: var(--inner_gap);
+    }
+
+
+    .footer .copyright,
+    .footer .creator
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .footer .creator
+    {
+        margin-top: var(--inner_gap_xs);
+    }
 }

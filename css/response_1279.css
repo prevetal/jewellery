@@ -838,11 +838,199 @@
 
 
 
+    /*-------------
+        Catalog
+    -------------*/
+    .catalog .category .info
+    {
+        padding: var(--inner_gap);
+
+        gap: 8px;
+    }
+
+
+
+    /*-----------
+        Promo
+    -----------*/
+    .promo .banner .info
+    {
+        min-height: 440px;
+        padding-block: 80px 60px;
+    }
+
+
+    .promo .banner .title
+    {
+        font-size: 48px;
+    }
+
+
+    .promo .banner .title span,
+    .promo .banner .desc
+    {
+        margin-left: 80px !important;
+    }
+
+
+    .promo .banner .link
+    {
+        height: 48px;
+    }
+
+
+
+    .promo .collection .image
+    {
+        min-height: 600px;
+    }
+
+
+    .promo .collection .swiper
+    {
+        margin-bottom: var(--outside_gap_s);
+    }
+
+
+    .promo .collection .swiper-pagination-bullet
+    {
+        width: 44px;
+    }
+
+
+
+    .promo .gallery
+    {
+        padding-block: var(--inner_gap_m);
+    }
+
+
+    .promo .gallery .grid_row
+    {
+        padding-inline: var(--block_padding);
+    }
+
+
+
+    /*----------------
+        About info
+    ----------------*/
+    .about_info .head
+    {
+        min-height: 480px;
+        padding-block: 80px 60px;
+    }
+
+
+    .about_info .head .title
+    {
+        width: 956px;
+    }
+
+
+    .about_info .head .btn
+    {
+        height: 48px;
+    }
+
+
+    .about_info .links a
+    {
+        min-height: 80px;
+
+        font-size: 24px;
+    }
+
+
+    .about_info .description
+    {
+        font-size: var(--font_size_s);
+    }
+
+
+
+    /*----------------
+        Boss quote
+    ----------------*/
+    .boss_quote .data
+    {
+        min-height: 440px;
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .boss_quote .info
+    {
+        width: 492px;
+    }
+
+
+    .boss_quote .quote:before
+    {
+        width: 44px;
+        height: 36px;
+    }
+
+
+
+    /*------------------
+        Request form
+    ------------------*/
+    .request_form .data
+    {
+        padding-block: var(--block_padding_l);
+        padding-inline: var(--block_padding_l);
+    }
+
+
+    .request_form .form .submit_btn
+    {
+        height: 48px;
+    }
+
+
+
     /*------------
         Footer
     ------------*/
     footer .creator
     {
         width: 100%;
+    }
+
+
+
+    /*------------
+        Footer
+    ------------*/
+    .footer .col
+    {
+        width: 176px;
+    }
+
+
+    .footer .links
+    {
+        width: 160px;
+        max-width: 100%;
+    }
+
+
+    .footer .links .items
+    {
+        max-width: none;
+    }
+
+
+    .footer .contacts
+    {
+        width: auto;
+    }
+
+
+    .footer .creator
+    {
+        width: auto;
     }
 }
