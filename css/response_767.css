@@ -143,9 +143,9 @@
     ------------*/
     .why_we .head .items
     {
-        font-size: var(--font_size_s);
-
         gap: var(--inner_gap_xs) var(--inner_gap_s);
+
+        font-size: var(--font_size_s);
     }
 
 
@@ -188,12 +188,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -259,9 +259,8 @@
     .payment .items
     {
         justify-content: flex-start;
-
-        row-gap: var(--inner_gap);
         column-gap: var(--block_padding_xl);
+        row-gap: var(--inner_gap);
     }
 
 
@@ -504,13 +503,13 @@
         display: grid;
         overflow: auto;
         justify-content: flex-start;
+        gap: var(--inner_gap);
 
         width: calc(100% + var(--cont_padding_double));
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);

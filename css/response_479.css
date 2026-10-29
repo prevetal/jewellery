@@ -248,9 +248,9 @@
 
     .cases2 .case .info
     {
-        width: calc(100% - 120px);
-
         gap: var(--inner_gap_s);
+
+        width: calc(100% - 120px);
     }
 
 

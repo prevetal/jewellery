@@ -138,9 +138,9 @@
 
     .first_section .col
     {
-        width: 628px;
-
         gap: var(--block_padding_l);
+
+        width: 628px;
     }
 
 
@@ -158,9 +158,9 @@
 
     .first_section .btns .btn
     {
-        height: 80px;
-
         gap: var(--inner_gap);
+
+        height: 80px;
     }
 
 
@@ -192,9 +192,9 @@
 
     .why_we .col_left
     {
-        width: 460px;
-
         gap: var(--inner_gap);
+
+        width: 460px;
     }
 
 
@@ -207,9 +207,9 @@
 
     .why_we .boss
     {
-        width: 252px;
-
         gap: var(--inner_gap_m);
+
+        width: 252px;
     }
 
 
@@ -229,28 +229,28 @@
 
     .why_we .col_right
     {
-        width: calc(100% - 712px);
-
         gap: var(--inner_gap_m);
+
+        width: calc(100% - 712px);
     }
 
 
     .why_we .banners .banner
     {
+        gap: var(--inner_gap_s);
+
         height: 400px;
         padding-block: var(--inner_gap_m);
         padding-inline: var(--inner_gap_m);
-
-        gap: var(--inner_gap_s);
     }
 
 
     .why_we .landmark
     {
+        gap: var(--inner_gap);
+
         margin-right: 0;
         margin-left: var(--inner_gap_m);
-
-        gap: var(--inner_gap);
     }
 
 
@@ -272,9 +272,9 @@
 
     .for_whom .item
     {
-        font-size: var(--font_size);
-
         gap: var(--inner_gap_s);
+
+        font-size: var(--font_size);
     }
 
 
@@ -373,11 +373,11 @@
 
     .guarantees .delivery
     {
+        gap: var(--inner_gap_m);
+
         width: 240px;
         padding-block: var(--inner_gap_m);
         padding-inline: var(--inner_gap_m);
-
-        gap: var(--inner_gap_m);
     }
 
 
@@ -455,9 +455,9 @@
 
     .materials .material
     {
-        width: 300px;
-
         gap: var(--inner_gap_l);
+
+        width: 300px;
     }
 
 
@@ -641,9 +641,9 @@
     ------------*/
     .cases2 .images
     {
-        margin-bottom: var(--inner_gap);
-
         gap: var(--inner_gap_s);
+
+        margin-bottom: var(--inner_gap);
     }
 
 
@@ -665,12 +665,12 @@
 
     .cases2 .case .info
     {
+        gap: var(--block_padding_s);
+
         width: calc(100% - 160px);
         padding: var(--block_padding_s);
 
         font-size: var(--font_size);
-
-        gap: var(--block_padding_s);
     }
 
 
@@ -929,10 +929,10 @@
     ------------------*/
     .request_form .data
     {
+        gap: var(--block_padding_l);
+
         padding-block: var(--block_padding_xl);
         padding-inline: var(--block_padding_xl);
-
-        gap: var(--block_padding_l);
     }
 
 

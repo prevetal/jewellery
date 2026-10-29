@@ -107,12 +107,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -204,10 +204,10 @@
 
     .guarantees .delivery
     {
+        gap: var(--inner_gap_s);
+
         width: 100%;
         margin-top: var(--block_padding_l);
-
-        gap: var(--inner_gap_s);
     }
 
 
@@ -230,9 +230,9 @@
 
     .payment .col_main
     {
-        width: 100%;
-
         gap: var(--inner_gap_m);
+
+        width: 100%;
     }
 
 
@@ -261,11 +261,11 @@
     ---------------*/
     .materials .block_head
     {
+        gap: 16px;
+
         width: 100%;
         margin-bottom: var(--block_head_offset);
         padding: 0;
-
-        gap: 16px;
     }
 
 
@@ -328,12 +328,12 @@
 
     .lets_make .btns
     {
+        gap: var(--inner_gap_s);
+
         width: 480px;
         max-width: 100%;
         margin-inline: auto;
         margin-top: var(--block_padding_l);
-
-        gap: var(--inner_gap_s);
     }
 
 
@@ -358,12 +358,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap_s);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_s);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -414,12 +414,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap_s);
 
         margin-block: 0 var(--inner_gap);
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap_s);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);
@@ -580,13 +580,13 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         width: calc(100% + var(--cont_padding_double));
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--cont_padding);

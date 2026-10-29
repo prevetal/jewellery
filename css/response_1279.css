@@ -90,18 +90,18 @@
 
     .first_section .col
     {
-        width: 100%;
-
         gap: var(--block_padding_l);
+
+        width: 100%;
     }
 
 
     .first_section .col + .col
     {
+        gap: var(--inner_gap_m);
+
         width: 100%;
         margin-top: var(--block_padding_l);
-
-        gap: var(--inner_gap_m);
     }
 
 
@@ -124,17 +124,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-
         gap: var(--inner_gap);
     }
 
 
     .first_section .btns .btn
     {
+        gap: var(--inner_gap_s);
+
         width: calc(50% - var(--inner_gap) / 2);
         height: 80px;
-
-        gap: var(--inner_gap_s);
     }
 
 
@@ -152,12 +151,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -332,9 +331,9 @@
 
     .cases .case .info .items
     {
-        font-size: var(--font_size_s);
-
         gap: var(--inner_gap_xs);
+
+        font-size: var(--font_size_s);
     }
 
 
@@ -459,12 +458,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -512,10 +511,10 @@
 
     .order .data
     {
+        gap: var(--block_padding_l);
+
         padding-block: var(--block_padding_xl);
         padding-inline: var(--block_padding_l);
-
-        gap: var(--block_padding_l);
     }
 
 
@@ -527,9 +526,9 @@
 
     .order .col_main
     {
-        width: calc(100% - 280px - var(--block_padding_l));
-
         gap: var(--inner_gap_m);
+
+        width: calc(100% - 280px - var(--block_padding_l));
     }
 
 
@@ -554,12 +553,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -642,12 +641,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -691,12 +690,12 @@
     {
         display: grid;
         overflow: auto;
+        gap: var(--inner_gap);
 
         margin-block: 0;
         margin-inline: calc(var(--cont_padding) * -1);
         padding-inline: var(--cont_padding);
 
-        gap: var(--inner_gap);
         grid-auto-flow: column;
         grid-auto-columns: max-content;
         scroll-padding: 0 var(--inner_gap);
@@ -843,9 +842,9 @@
     -------------*/
     .catalog .category .info
     {
-        padding: var(--inner_gap);
-
         gap: 8px;
+
+        padding: var(--inner_gap);
     }
 
 
