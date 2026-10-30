@@ -72,6 +72,202 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
+	// Product info
+	if ($('.product_info .images').length) {
+		const productImages = document.querySelector('.product_info .big .swiper'),
+			productThumbs = document.querySelector('.product_info .thumbs .swiper')
+
+		const productThumbsSlider = new Swiper('.product_info .thumbs .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			direction: 'vertical',
+			navigation: {
+				nextEl: productThumbs.querySelector('.swiper-button-next'),
+				prevEl: productThumbs.querySelector('.swiper-button-prev')
+			},
+			spaceBetween: getCssVar(productThumbs, '--spaceBetween'),
+			slidesPerView: getCssVar(productThumbs, '--slidesPerView'),
+		})
+
+		new Swiper('.product_info .big .swiper', {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: getCssVar(productImages, '--spaceBetween'),
+			slidesPerView: getCssVar(productImages, '--slidesPerView'),
+			thumbs: {
+				swiper: productThumbsSlider
+			},
+		})
+	}
+
+
+	// Product metal
+	$('.product_info .metal .main input').change(function(e) {
+		const index = $(this).closest('label').index() + 1
+
+		$('.product_info .metal .metal_info').hide()
+		$('.product_info .metal .metal_info' + index).fadeIn(200)
+	})
+
+
+	// Reviews slider
+	document.querySelectorAll('.review .images .swiper').forEach(el => {
+		new Swiper(el, {
+			loop: false,
+			// loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: getCssVar(el, '--spaceBetween'),
+			slidesPerView: getCssVar(el, '--slidesPerView'),
+			nested: true,
+		})
+	})
+
+
+	document.querySelectorAll('.reviews .swiper.main').forEach(el => {
+		new Swiper(el, {
+			loop: false,
+			// loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			breakpoints: {
+				0: {
+					spaceBetween: getCssVar(el, '--spaceBetween-0'),
+					slidesPerView: getCssVar(el, '--slidesPerView-0'),
+				},
+				768: {
+					spaceBetween: getCssVar(el, '--spaceBetween-768'),
+					slidesPerView: getCssVar(el, '--slidesPerView-768'),
+				},
+				1280: {
+					spaceBetween: getCssVar(el, '--spaceBetween-1280'),
+					slidesPerView: getCssVar(el, '--slidesPerView-1280'),
+				}
+			}
+		})
+	})
+
+
+	// Products slider
+	document.querySelectorAll('.products .swiper').forEach(el => {
+		new Swiper(el, {
+			loop: false,
+			// loopAdditionalSlides: 1,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			breakpoints: {
+				0: {
+					spaceBetween: getCssVar(el, '--spaceBetween-0'),
+					slidesPerView: getCssVar(el, '--slidesPerView-0'),
+				},
+				768: {
+					spaceBetween: getCssVar(el, '--spaceBetween-768'),
+					slidesPerView: getCssVar(el, '--slidesPerView-768'),
+				},
+				1280: {
+					spaceBetween: getCssVar(el, '--spaceBetween-1280'),
+					slidesPerView: getCssVar(el, '--slidesPerView-1280'),
+				}
+			}
+		})
+	})
+
+
+	// Fancybox - zoom images
+	Fancybox.bind('.fancy_img', {
+		l10n: Fancybox.l10n.ru_RU,
+		zoomEffect: false,
+		Carousel: {
+			Zoomable: {
+				Panzoom: {
+					maxScale: 1
+				}
+			}
+		}
+	})
+
+
+	// Dialog
+	document.addEventListener('click', e => {
+		const openBtn = e.target.closest('[data-open-modal]')
+
+		if (openBtn) {
+			e.preventDefault()
+
+			document.getElementById(openBtn.dataset.openModal)?.showModal()
+		}
+
+
+		const closeBtn = e.target.closest('[data-close-modal]')
+
+		if (closeBtn) {
+			closeBtn.closest('dialog')?.close()
+		}
+
+
+		// Click outside the modal content
+		const modal = e.target.closest('.side_modal')
+
+		if (modal && !e.target.closest('.inner')) {
+			modal.close()
+		}
+	})
+
+
+	// Order
+	$('#order_modal form').submit((e) => {
+		e.preventDefault()
+
+		const modal = e.target.closest('.side_modal')
+
+		modal.close()
+
+		document.getElementById('check_order_modal')?.showModal()
+	})
+
+	$('#check_order_modal .submit_btn').click((e) => {
+		e.preventDefault()
+
+		const modal = e.target.closest('.side_modal')
+
+		modal.close()
+
+		document.getElementById('cost_production_order_modal')?.showModal()
+	})
+
+	$('#cost_production_order_modal form').submit((e) => {
+		e.preventDefault()
+
+		const modal = e.target.closest('.side_modal')
+
+		modal.close()
+
+		document.getElementById('success_order_modal')?.showModal()
+	})
+
+	$('#change_model_order_modal form').submit((e) => {
+		e.preventDefault()
+
+		const modal = e.target.closest('.side_modal')
+
+		modal.close()
+
+		document.getElementById('ready_order_modal')?.showModal()
+	})
+
+
 	// Mob. menu
 	$('.mob_header .mob_menu_btn').click((e) => {
 		e.preventDefault()

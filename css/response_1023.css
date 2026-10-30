@@ -729,6 +729,111 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info
+    {
+        .cont
+        {
+            gap: var(--inner_gap_m);
+        }
+
+
+        .col_left
+        {
+            width: 100%;
+        }
+
+
+        .col_main
+        {
+            width: 100%;
+            padding-inline: var(--inner_gap_m);
+        }
+
+
+        .images
+        {
+            padding-left: 100px;
+
+
+            .thumbs
+            {
+                width: 88px;
+            }
+        }
+
+
+        .description
+        {
+            width: calc(100% - 220px - var(--inner_gap_m));
+        }
+
+
+        .features
+        {
+            width: 220px;
+            padding-top: 0;
+            padding-left: var(--inner_gap);
+
+            border: none;
+            border-left: 1px solid #dedede;
+        }
+
+
+        .size
+        {
+            .grid_row
+            {
+                --items_per_line: 9;
+            }
+        }
+    }
+
+
+
+    /*-----------------------
+        Product questions
+    -----------------------*/
+    .product_questions
+    {
+        .grid_row
+        {
+            --items_per_line: 1;
+        }
+
+
+        .section
+        {
+            padding-inline: var(--inner_gap_m);
+        }
+
+
+        .item
+        {
+            & > .btn
+            {
+                min-height: 64px;
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .add_btn
+        {
+            min-width: 200px;
+        }
+    }
+
+
+
     /*------------
         Footer
     ------------*/

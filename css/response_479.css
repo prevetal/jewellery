@@ -463,6 +463,161 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info
+    {
+        .col_main
+        {
+            width: calc(100% + var(--cont_padding_double));
+            max-width: calc(100% + var(--cont_padding_double));
+            margin-inline: calc(var(--cont_padding) * -1);
+            padding-block: var(--inner_gap);
+            padding-inline: var(--cont_padding);
+        }
+
+
+        .images
+        {
+            padding-left: 60px;
+
+
+            .big
+            {
+                .zoom
+                {
+                    width: 40px;
+
+
+                    .icon
+                    {
+                        width: 12px;
+                    }
+                }
+            }
+
+
+            .thumbs
+            {
+                width: 52px;
+
+
+                .swiper
+                {
+                    --spaceBetween: var(--inner_gap_xs);
+                }
+            }
+        }
+
+
+        .images_features
+        {
+            .grid_row
+            {
+                --items_per_line: 2;
+                --gap_y: var(--inner_gap_s);
+            }
+        }
+
+
+        .title
+        {
+            font-size: 40px;
+        }
+
+
+        .code
+        {
+            width: 72px;
+            min-width: 72px;
+        }
+
+
+        .metal
+        {
+            .metal_info
+            {
+                .grid_row
+                {
+                    --items_per_line: 2;
+                }
+            }
+        }
+
+
+        .size
+        {
+            .grid_row
+            {
+                --items_per_line: 5;
+            }
+        }
+
+
+        .order_info
+        {
+            .info,
+            .price
+            {
+                width: 100%;
+
+                text-align: left;
+            }
+        }
+
+
+        .btns
+        {
+            .size_btn
+            {
+                height: 48px;
+            }
+
+
+            .edit_btn
+            {
+                height: 48px;
+
+
+                .icon
+                {
+                    width: 20px;
+                }
+
+
+                span
+                {
+                    max-width: calc(100% - 20px - var(--inner_gap_s));
+                }
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 315px;
+            }
+        }
+
+
+        .add_btn
+        {
+            width: 100%;
+        }
+    }
+
+
+
     /*------------
         Footer
     ------------*/

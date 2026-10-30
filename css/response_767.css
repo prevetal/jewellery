@@ -87,6 +87,19 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .page_head
+    {
+        .breadcrumbs
+        {
+            padding-inline: 0;
+        }
+    }
+
+
+
     /*----------------
         Block head
     ----------------*/
@@ -615,6 +628,196 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info
+    {
+        .cont
+        {
+            gap: var(--inner_gap);
+        }
+
+
+        .col_main
+        {
+            padding-inline: var(--inner_gap);
+        }
+
+
+        .images
+        {
+            padding-left: 72px;
+
+
+            .big
+            {
+                .zoom
+                {
+                    width: 44px;
+
+
+                    .icon
+                    {
+                        width: 14px;
+                    }
+                }
+            }
+
+
+            .thumbs
+            {
+                width: 60px;
+            }
+        }
+
+
+        .images_features
+        {
+            .item
+            {
+                .icon
+                {
+                    width: 40px;
+                    padding: 8px;
+
+
+                    & + *
+                    {
+                        width: calc(100% - 40px - var(--inner_gap_s));
+                    }
+                }
+            }
+        }
+
+
+        .title
+        {
+            font-size: 44px;
+        }
+
+
+        .description
+        {
+            width: 100%;
+        }
+
+
+        .features
+        {
+            width: 100%;
+            padding-top: var(--inner_gap);
+            padding-left: 0;
+
+            border: none;
+            border-top: 1px solid #dedede;
+        }
+
+
+        .metal
+        {
+            .vals
+            {
+                .grid_row
+                {
+                    --items_per_line: 2;
+                }
+            }
+        }
+
+
+        .size
+        {
+            .grid_row
+            {
+                --items_per_line: 6;
+            }
+        }
+
+
+        .order_info
+        {
+            .info
+            {
+                width: calc(100% - 160px - var(--inner_gap));
+            }
+
+
+            .price
+            {
+                width: 160px;
+            }
+        }
+
+
+        .btns
+        {
+            .size_btn,
+            .edit_btn
+            {
+                height: 52px;
+            }
+        }
+    }
+
+
+
+    /*-----------------------
+        Product questions
+    -----------------------*/
+    .product_questions
+    {
+        .grid_row
+        {
+            --gap_x: var(--zero_px);
+            --gap_y: var(--inner_gap_s);
+        }
+
+
+        .item
+        {
+            & > .btn
+            {
+                min-height: 60px;
+                padding-block: var(--inner_gap_s);
+            }
+        }
+    }
+
+
+
+    /*-------------
+        Reviews
+    -------------*/
+    .reviews
+    {
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 360px;
+            }
+        }
+    }
+
+
+
+    /*--------------
+        Products
+    --------------*/
+    .products
+    {
+        .swiper
+        {
+            .swiper-slide
+            {
+                width: 240px;
+            }
+        }
+    }
+
+
+
     /*------------
         Footer
     ------------*/
@@ -648,5 +851,38 @@
     {
         width: calc(50% - var(--inner_gap_xs));
         margin-bottom: var(--block_padding_l);
+    }
+
+
+
+    /*----------------
+        Side modal
+    ----------------*/
+    .side_modal
+    {
+        .inner
+        {
+            .close_btn
+            {
+                top: var(--inner_gap_m);
+                right: var(--inner_gap_m);
+            }
+
+
+            .modal_title
+            {
+                padding-block: var(--inner_gap_m);
+                padding-inline: var(--inner_gap_m) 76px;
+
+                font-family: var(--font_family2);
+                font-size: 26px;
+            }
+
+
+            .modal_data
+            {
+                padding: var(--inner_gap_m);
+            }
+        }
     }
 }

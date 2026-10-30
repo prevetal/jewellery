@@ -31,6 +31,14 @@ const setHeight = items => {
 }
 
 
+const getCssVar = (el, name) => {
+	const val = getComputedStyle(el).getPropertyValue(name).trim(),
+		num = parseFloat(val)
+
+	return isNaN(num) ? val : num
+}
+
+
 const is_touch_device = () => !!('ontouchstart' in window)
 
 

@@ -1,0 +1,36 @@
+// Fancybox: Russian localization (there is no official one)
+Fancybox.l10n = Fancybox.l10n || {}
+
+Fancybox.l10n.ru_RU = {
+	IMAGE_ERROR: 'Не удалось загрузить изображение. <br /> Попробуйте позже.',
+	MOVE_UP: 'Сдвинуть вверх',
+	MOVE_DOWN: 'Сдвинуть вниз',
+	MOVE_LEFT: 'Сдвинуть влево',
+	MOVE_RIGHT: 'Сдвинуть вправо',
+	ZOOM_IN: 'Увеличить',
+	ZOOM_OUT: 'Уменьшить',
+	TOGGLE_FULL: 'Изменить масштаб',
+	TOGGLE_1TO1: 'Изменить масштаб',
+	ITERATE_ZOOM: 'Изменить масштаб',
+	ROTATE_CCW: 'Повернуть против часовой стрелки',
+	ROTATE_CW: 'Повернуть по часовой стрелке',
+	FLIP_X: 'Отразить по горизонтали',
+	FLIP_Y: 'Отразить по вертикали',
+	RESET: 'Сбросить',
+	TOGGLE_FS: 'Полноэкранный режим',
+	ERROR: 'Что-то пошло не так. <br /> Попробуйте позже.',
+	GOTO: 'Перейти к слайду %d',
+	DOWNLOAD: 'Скачать',
+	TOGGLE_FULLSCREEN: 'Полноэкранный режим',
+	TOGGLE_EXPAND: 'Полноразмерный режим',
+	TOGGLE_THUMBS: 'Показать миниатюры',
+	TOGGLE_AUTOPLAY: 'Слайд-шоу',
+	CLOSE: 'Закрыть',
+	NEXT: 'Следующий',
+	PREV: 'Предыдущий',
+	MODAL: 'Это окно можно закрыть клавишей ESC',
+	ELEMENT_NOT_FOUND: 'HTML-элемент не найден',
+	IFRAME_ERROR: 'Ошибка загрузки страницы',
+	NO_CAPTION: 'Без подписи',
+	TOGGLE_SIDEBAR: 'Боковая панель'
+}

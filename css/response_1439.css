@@ -958,6 +958,55 @@
 
 
 
+    /*------------------
+        Product info
+    ------------------*/
+    .product_info
+    {
+        margin-bottom: var(--inner_gap);
+
+
+        .col_left
+        {
+            width: calc(100% - 600px - var(--inner_gap));
+        }
+
+
+        .col_main
+        {
+            width: 600px;
+        }
+
+
+        .description
+        {
+            width: calc(100% - 200px - var(--inner_gap_m));
+        }
+
+
+        .features
+        {
+            width: 200px;
+        }
+
+
+        .order_info
+        {
+            .info
+            {
+                width: calc(100% - 200px - var(--inner_gap_m));
+            }
+
+
+            .price
+            {
+                width: 200px;
+            }
+        }
+    }
+
+
+
     /*------------
         Footer
     ------------*/
