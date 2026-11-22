@@ -5421,8 +5421,8 @@ header .menu .item > a:not(.mark).active
         .top
         {
             display: flex;
-            align-content: flex-start;
-            align-items: flex-start;
+            align-content: center;
+            align-items: center;
             flex-wrap: wrap;
             justify-content: space-between;
             gap: 10px;
@@ -5432,6 +5432,12 @@ header .menu .item > a:not(.mark).active
             .exp
             {
                 width: calc(50% - 5px);
+            }
+
+
+            .exp
+            {
+                color: #181818;
             }
         }
 
@@ -5686,7 +5692,7 @@ header .menu .item > a:not(.mark).active
 
             .val
             {
-                font-size: 10px;
+                font-size: 11px;
                 line-height: 140%;
 
                 color: #28282a;
@@ -5696,7 +5702,7 @@ header .menu .item > a:not(.mark).active
                 {
                     font-size: 9px;
                     font-weight: 500;
-                    line-height: 14px;
+                    line-height: calc(100% + 5px);
 
 
                     .ready &
@@ -5716,7 +5722,8 @@ header .menu .item > a:not(.mark).active
 
         .exp
         {
-            font-size: 11px;
+            font-size: var(--font_size_xs);
+            font-weight: 500;
             line-height: 163.636%;
 
 
@@ -5857,9 +5864,6 @@ header .menu .item > a:not(.mark).active
 
             span
             {
-                font-size: 11px;
-                line-height: 163.636%;
-
                 color: #808080;
             }
         }
