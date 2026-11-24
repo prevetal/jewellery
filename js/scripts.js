@@ -113,6 +113,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		$('.product_info .metal .metal_info').hide()
 		$('.product_info .metal .metal_info' + index).fadeIn(200)
+
+		updateOrderInfo()
+	})
+
+
+	// Product metal params, size
+	$('.product_info .metal .metal_info input, .product_info .size input[name="size"]').change(updateOrderInfo)
+
+
+	// Product order info
+	function updateOrderInfo() {
+		const metalIndex = $('.product_info .metal .main input:checked').closest('label').index() + 1,
+			orderInfo = $('.product_info .order_info' + metalIndex),
+			color = $('.product_info .metal input[name="metal2_color"]:checked').next().text(),
+			fineness = $('.product_info .metal input[name="metal2_fineness"]:checked').next().text(),
+			size = $('.product_info .size input[name="size"]:checked').next('.val').text()
+
+		// One block per metal
+		if (orderInfo.length) {
+			$('.product_info .order_info').addClass('hide')
+			orderInfo.removeClass('hide')
+
+			// No price in the button when the cost is calculated
+			$('.product_info .buy_btn .buy_price').toggle(!orderInfo.find('.price.by_calculation').length)
+		}
+
+		$('.product_info .performance_color').text(color)
+		$('.product_info .performance_fineness').text(fineness)
+
+		// Products without a size have no size button
+		if ($('.product_info .size_btn').length) {
+			if (size) {
+				$('.product_info .performance_size').text(size)
+			}
+
+			$('.product_info .size_btn').toggleClass('hide', !!size)
+			$('.product_info .buy_btn').toggleClass('hide', !size)
+		}
+	}
+
+
+	window.addEventListener('pageshow', () => {
+		const metalIndex = $('.product_info .metal .main input:checked').closest('label').index() + 1
+
+		$('.product_info .metal .metal_info').hide()
+		$('.product_info .metal .metal_info' + metalIndex).show()
+
+		updateOrderInfo()
 	})
 
 

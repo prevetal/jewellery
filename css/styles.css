@@ -5785,6 +5785,12 @@ header .menu .item > a:not(.mark).active
         background: #ebeced;
 
 
+        &.hide
+        {
+            display: none;
+        }
+
+
         .your_performance
         {
             display: flex;
@@ -5880,6 +5886,21 @@ header .menu .item > a:not(.mark).active
             text-align: right;
 
             color: #181818;
+
+
+            &.by_calculation
+            {
+                width: 100%;
+
+                text-align: left;
+
+
+                & + .info
+                {
+                    width: 100%;
+                    margin-top: -10px;
+                }
+            }
         }
     }
 
@@ -5905,6 +5926,12 @@ header .menu .item > a:not(.mark).active
 
             color: var(--light_color);
             background: var(--primary_color);
+
+
+            &.hide
+            {
+                display: none;
+            }
 
 
             @media (hover: hover) and (pointer: fine)

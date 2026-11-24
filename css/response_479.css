@@ -569,7 +569,8 @@
 
         .btns
         {
-            .size_btn
+            .size_btn,
+            .buy_btn
             {
                 height: 48px;
             }

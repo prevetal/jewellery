@@ -753,6 +753,7 @@
         .btns
         {
             .size_btn,
+            .buy_btn,
             .edit_btn
             {
                 height: 52px;

@@ -347,7 +347,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal" checked>
+											<input type="radio" name="metal">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal2.svg" alt="" loading="lazy">
@@ -357,7 +357,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal" checked>
+											<input type="radio" name="metal">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal1.svg" alt="" loading="lazy">
@@ -503,7 +503,7 @@
 								<button class="other_size_btn"  data-open-modal="other_size_modal">Другой размер или пока не знаю</button>
 							</div>
 
-							<div class="order_info">
+							<div class="order_info order_info1">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
@@ -512,7 +512,7 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val">Серебро 925 · Размер не выбран</div>
+										<div class="val">Серебро 925 · Размер <span class="performance_size">не выбран</span></div>
 									</div>
 								</div>
 
@@ -525,8 +525,50 @@
 								<div class="price">40 000 ₽</div>
 							</div>
 
+							<div class="order_info order_info2 hide">
+								<div class="your_performance">
+									<picture class="thumb">
+										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
+									</picture>
+
+									<div>
+										<div class="label">Ваше исполнение</div>
+
+										<div class="val"><span class="performance_color">Жёлтое</span> золото <span class="performance_fineness">585</span> · Размер <span class="performance_size">не выбран</span></div>
+									</div>
+								</div>
+
+								<div class="price by_calculation">Стоимость по расчёту</div>
+
+								<div class="info">
+									<div>Выберите размер, чтобы узнать наличие и срок.</div>
+								</div>
+							</div>
+
+							<div class="order_info order_info3 hide">
+								<div class="your_performance">
+									<picture class="thumb">
+										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
+									</picture>
+
+									<div>
+										<div class="label">Ваше исполнение</div>
+
+										<div class="val">Платина 950 · Размер <span class="performance_size">не выбран</span></div>
+									</div>
+								</div>
+
+								<div class="price by_calculation">Стоимость по расчёту</div>
+
+								<div class="info">
+									<div>Выберите размер, чтобы узнать наличие и срок.</div>
+								</div>
+							</div>
+
 							<div class="btns">
-								<button class="size_btn" data-open-modal="order_modal">Выбрать размер</button>
+								<button class="size_btn">Выбрать размер</button>
+
+								<button class="buy_btn hide" data-open-modal="order_modal">Купить</button>
 
 								<div class="exp">Размер не выбран автоматически.</div>
 
