@@ -118,43 +118,109 @@ document.addEventListener('DOMContentLoaded', function() {
 	})
 
 
-	// Product metal params, size
-	$('.product_info .metal .metal_info input, .product_info .size input[name="size"]').change(updateOrderInfo)
+	// Product metal params
+	$('.product_info .metal .metal_info input').change(updateOrderInfo)
+
+
+	// Product size
+	const sizes = $('.product_info .size input[name="size"]'),
+		readySizes = $('.product_info .size label.ready')
+
+	let otherSize = '',
+		unknownSize = false
+
+	sizes.change(() => selectSize())
+
+	function selectSize(other = '', unknown = false) {
+		otherSize = other
+		unknownSize = unknown
+
+		if (other || unknown) {
+			sizes.prop('checked', false)
+		}
+
+		updateOrderInfo()
+	}
+
+
+	// Product other size
+	$('#other_size_modal form').submit(function(e) {
+		e.preventDefault()
+
+		const size = String(parseFloat($(this).find('.input').val().replace(',', '.'))).replace('.', ','),
+			input = sizes.filter((i, el) => $(el).next('.val').text() === size)
+
+		input.prop('checked', true)
+
+		selectSize(input.length ? '' : size)
+
+		this.closest('.side_modal').close()
+	})
+
+
+	// Product unknown size
+	$('[data-size-unknown]').click(function() {
+		selectSize('', true)
+
+		this.closest('.side_modal').close()
+	})
+
+
+	// Product select metal
+	$('[data-select-metal]').click(function() {
+		this.closest('.side_modal').close()
+
+		$('.product_info .metal .main input[value="' + this.dataset.selectMetal + '"]').prop('checked', true).trigger('change')
+
+		document.querySelector('.product_info .metal').scrollIntoView({ block: 'center', behavior: 'smooth' })
+	})
+
+
+	// Product mode: select - no size, ready - in stock, repeat - made to order, quote / unknown - cost is calculated
+	function getProductMode(metal) {
+		if (!sizes.length) {
+			return metal === 'silver' ? $('.product_info').attr('data-stock') : 'quote'
+		}
+
+		if (unknownSize) return 'unknown'
+		if (!otherSize && !sizes.is(':checked')) return 'select'
+		if (metal !== 'silver' || otherSize) return 'quote'
+
+		return readySizes.find('input').is(':checked') ? 'ready' : 'repeat'
+	}
 
 
 	// Product order info
 	function updateOrderInfo() {
-		const metalIndex = $('.product_info .metal .main input:checked').closest('label').index() + 1,
-			orderInfo = $('.product_info .order_info' + metalIndex),
-			color = $('.product_info .metal input[name="metal2_color"]:checked').next().text(),
-			fineness = $('.product_info .metal input[name="metal2_fineness"]:checked').next().text(),
-			size = $('.product_info .size input[name="size"]:checked').next('.val').text()
+		const metal = $('.product_info .metal .main input:checked').val(),
+			mode = getProductMode(metal),
+			size = otherSize || sizes.filter(':checked').next('.val').text()
 
-		// One block per metal
-		if (orderInfo.length) {
-			$('.product_info .order_info').addClass('hide')
-			orderInfo.removeClass('hide')
+		// Elements for certain metals / modes only
+		document.querySelectorAll('[data-state]').forEach(el => {
+			const states = el.dataset.state.split(' ')
 
-			// No price in the button when the cost is calculated
-			$('.product_info .buy_btn .buy_price').toggle(!orderInfo.find('.price.by_calculation').length)
-		}
+			el.classList.toggle('hide', !states.includes(metal) && !states.includes(mode))
+		})
 
-		$('.product_info .performance_color').text(color)
-		$('.product_info .performance_fineness').text(fineness)
+		// Ready sizes are in silver only
+		readySizes.toggleClass('ready', metal === 'silver').toggleClass('will_manufacture', metal !== 'silver')
 
-		// Products without a size have no size button
-		if ($('.product_info .size_btn').length) {
-			if (size) {
-				$('.product_info .performance_size').text(size)
-			}
+		readySizes.find('[data-ready]').each((i, el) => {
+			el.textContent = metal === 'silver' ? el.dataset.ready : el.dataset.manufacture
+		})
 
-			$('.product_info .size_btn').toggleClass('hide', !!size)
-			$('.product_info .buy_btn').toggleClass('hide', !size)
-		}
+		// Selected params
+		$('.performance_color').text($('.product_info .metal input[name="metal2_color"]:checked').next().text())
+		$('.performance_fineness').text($('.product_info .metal input[name="metal2_fineness"]:checked').next().text())
+		$('.performance_size').text(size || $('.product_info .size').attr(unknownSize ? 'data-unknown' : 'data-empty'))
+		$('.selected_metal').text($('.product_info .order_info:not(.hide) .performance_metal').text())
 	}
 
 
 	window.addEventListener('pageshow', () => {
+		if (!$('.product_info .metal').length) return
+
 		const metalIndex = $('.product_info .metal .main input:checked').closest('label').index() + 1
 
 		$('.product_info .metal .metal_info').hide()
@@ -275,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	// Order
-	$('#order_modal form').submit((e) => {
+	$('#order_modal form, #order_modal2 form').submit((e) => {
 		e.preventDefault()
 
 		const modal = e.target.closest('.side_modal')
@@ -292,20 +358,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		modal.close()
 
-		document.getElementById('cost_production_order_modal')?.showModal()
-	})
-
-	$('#cost_production_order_modal form').submit((e) => {
-		e.preventDefault()
-
-		const modal = e.target.closest('.side_modal')
-
-		modal.close()
-
 		document.getElementById('success_order_modal')?.showModal()
 	})
 
-	$('#change_model_order_modal form').submit((e) => {
+	$('#cost_production_order_modal form, #change_model_order_modal form').submit((e) => {
 		e.preventDefault()
 
 		const modal = e.target.closest('.side_modal')

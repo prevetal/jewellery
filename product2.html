@@ -179,7 +179,7 @@
 				</section>
 
 
-				<section class="product_info">
+				<section class="product_info" data-stock="ready">
 					<div class="cont">
 						<div class="col_left">
 							<div class="images">
@@ -319,13 +319,18 @@
 										<img src="images/ic_product_delivery.svg" alt="" loading="lazy">
 									</picture>
 
-									<span>Бесплатная доставка с примеркой</span>
+									<span>
+										<span data-state="silver">Бесплатная доставка с примеркой</span>
+										<span class="hide" data-state="gold platinum">Бесплатная доставка по России</span>
+									</span>
 								</div>
 
 								<div class="desc">
-									<p>Доставим подвеску «Карандаш» в выбранный вами пункт СДЭК. Перед тем как забрать заказ, вы сможете осмотреть и примерить украшение.</p>
+									<p data-state="silver">Доставим подвеску «Карандаш» в выбранный вами пункт СДЭК. Перед тем как забрать заказ, вы сможете осмотреть и примерить украшение.</p>
 
-									<p>Если оно не подойдёт, откажитесь от заказа на месте. Мы вернём полную стоимость, а обратную доставку оплатим сами.</p>
+									<p data-state="silver">Если оно не подойдёт, откажитесь от заказа на месте. Мы вернём полную стоимость, а обратную доставку оплатим сами.</p>
+
+									<p class="hide" data-state="gold platinum">Доставим готовую подвеску в выбранный вами пункт СДЭК. Параметры, стоимость и срок изготовления согласуем заранее.</p>
 								</div>
 							</div>
 
@@ -339,7 +344,7 @@
 								<div class="vals">
 									<div class="grid_row">
 										<label class="main">
-											<input type="radio" name="metal" checked>
+											<input type="radio" name="metal" value="silver" checked>
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal1.svg" alt="" loading="lazy">
@@ -349,7 +354,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal">
+											<input type="radio" name="metal" value="gold">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal2.svg" alt="" loading="lazy">
@@ -359,7 +364,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal">
+											<input type="radio" name="metal" value="platinum">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal1.svg" alt="" loading="lazy">
@@ -425,7 +430,7 @@
 								<div class="no">Выбирать размер не нужно. Высоту подвески можно менять регулируемым шнурком.</div>
 							</div>
 
-							<div class="order_info order_info1">
+							<div class="order_info order_info1" data-state="silver">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb2.jpg" alt="" loading="lazy">
@@ -434,12 +439,14 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val">Серебро 925 · регулируемый шнурок в комплекте</div>
+										<div class="val"><span class="performance_metal">Серебро 925</span> · регулируемый шнурок в комплекте</div>
 									</div>
 								</div>
 
 								<div class="info">
-									<div class="ready">В наличии. Отправим в течение 2 рабочих дней.</div>
+									<div class="ready" data-state="ready">В наличии. Отправим в течение 2 рабочих дней.</div>
+
+									<div class="will_manufacture hide" data-state="repeat">В наличии нет. Изготовим повтор модели за 2–3 недели.</div>
 
 									<div><span>Подвеска из серебра 925 и регулируемый шнурок.</span></div>
 								</div>
@@ -447,7 +454,7 @@
 								<div class="price">10 400 ₽</div>
 							</div>
 
-							<div class="order_info order_info2 hide">
+							<div class="order_info order_info2 hide" data-state="gold">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb2.jpg" alt="" loading="lazy">
@@ -456,18 +463,20 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val"><span class="performance_color">Жёлтое</span> золото <span class="performance_fineness">585</span> · регулируемый шнурок в комплекте</div>
+										<div class="val"><span class="performance_metal"><span class="performance_color">Жёлтое</span> золото <span class="performance_fineness">585</span></span> · регулируемый шнурок в комплекте</div>
 									</div>
 								</div>
 
 								<div class="price by_calculation">Стоимость по расчёту</div>
 
 								<div class="info">
-									<div>Стоимость и срок рассчитываем по выбранным параметрам.</div>
+									<div class="will_manufacture">Изготовим на заказ. Рассчитаем стоимость и срок.</div>
+
+									<div><span>Точную цену и комплектацию подтвердим до оплаты.</span></div>
 								</div>
 							</div>
 
-							<div class="order_info order_info3 hide">
+							<div class="order_info order_info3 hide" data-state="platinum">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb2.jpg" alt="" loading="lazy">
@@ -476,21 +485,31 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val">Платина 950 · регулируемый шнурок в комплекте</div>
+										<div class="val"><span class="performance_metal">Платина 950</span> · регулируемый шнурок в комплекте</div>
 									</div>
 								</div>
 
 								<div class="price by_calculation">Стоимость по расчёту</div>
 
 								<div class="info">
-									<div>Стоимость и срок рассчитываем по выбранным параметрам.</div>
+									<div class="will_manufacture">Изготовим на заказ. Рассчитаем стоимость и срок.</div>
+
+									<div><span>Точную цену и комплектацию подтвердим до оплаты.</span></div>
 								</div>
 							</div>
 
 							<div class="btns">
-								<button class="buy_btn" data-open-modal="order_modal">Купить «Карандаш»<span class="buy_price"> — 10 400 ₽</span></button>
+								<button class="buy_btn" data-state="ready" data-open-modal="order_modal">Купить «Карандаш» — 10 400 ₽</button>
 
-								<div class="exp">Оплата на сайте при оформлении заказа.</div>
+								<button class="buy_btn hide" data-state="repeat" data-open-modal="order_modal2">Заказать изготовление — 10 400 ₽</button>
+
+								<button class="buy_btn hide" data-state="quote" data-open-modal="cost_production_order_modal">Узнать стоимость и срок</button>
+
+								<div class="exp" data-state="ready">Оплата на сайте при оформлении заказа.</div>
+
+								<div class="exp hide" data-state="repeat">Повтор каталожной модели. Срок указан до оплаты.</div>
+
+								<div class="exp hide" data-state="quote">Сначала получите предложение. Оплата — после согласования.</div>
 
 								<button class="edit_btn" data-open-modal="change_model_order_modal">
 									<svg class="icon"><use xlink:href="images/sprite.svg#ic_edit"></use></svg>
@@ -873,7 +892,7 @@
 
 														<p>Стоимость и срок рассчитываем по выбранным параметрам. Сначала согласуем предложение, затем вы решаете, оформлять ли заказ.</p>
 
-														<button class="btn">Выбрать металл и получить расчёт</button>
+														<button class="btn" data-select-metal="gold">Выбрать металл и получить расчёт</button>
 													</div>
 												</div>
 											</div>
@@ -1271,24 +1290,24 @@
 					<div class="modal_data">
 						<div class="product">
 							<picture class="thumb">
-								<img src="images/tmp/order_product_thumb.jpg" alt="" loading="lazy">
+								<img src="images/tmp/product2_thumbs_img1.jpg" alt="" loading="lazy">
 							</picture>
 
 							<div>
-								<div class="name">Кольцо «Русалка»</div>
+								<div class="name">Подвеска «Карандаш»</div>
 
-								<div class="code">Артикул С-201</div>
+								<div class="code">Артикул С-044</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Регулируемый шнурок в комплекте</div>
 								</div>
 							</div>
 						</div>
 
-						<div class="product_status ready">Готовое кольцо · отправим в течение 2 рабочих дней</div>
+						<div class="product_status ready">Готовая подвеска · отправим в течение 2 рабочих дней</div>
 
-						<div class="product_price_delivery">40 000 ₽ · доставка до СДЭК бесплатно.</div>
+						<div class="product_price_delivery">10 400 ₽ · доставка до СДЭК бесплатно.</div>
 
 						<form action="" class="form">
 							<div class="line">
@@ -1355,24 +1374,24 @@
 					<div class="modal_data">
 						<div class="product">
 							<picture class="thumb">
-								<img src="images/tmp/order_product_thumb.jpg" alt="" loading="lazy">
+								<img src="images/tmp/product2_thumbs_img1.jpg" alt="" loading="lazy">
 							</picture>
 
 							<div>
-								<div class="name">Кольцо «Русалка»</div>
+								<div class="name">Подвеска «Карандаш»</div>
 
-								<div class="code">Артикул С-201</div>
+								<div class="code">Артикул С-044</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Регулируемый шнурок в комплекте</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="product_status will_manufacture">Повтор модели · изготовление 2–3 недели</div>
 
-						<div class="product_price_delivery">40 000 ₽ · доставка до СДЭК бесплатно.</div>
+						<div class="product_price_delivery">10 400 ₽ · доставка до СДЭК бесплатно.</div>
 
 						<form action="" class="form">
 							<div class="line">
@@ -1468,10 +1487,16 @@
 								<div class="val">Выбранный пункт СДЭК</div>
 							</div>
 
-							<div>
+							<div data-state="ready">
 								<div class="label">Отправка</div>
 
 								<div class="val">В течение 2 рабочих дней</div>
+							</div>
+
+							<div class="hide" data-state="repeat">
+								<div class="label">Изготовление</div>
+
+								<div class="val">2–3 недели</div>
 							</div>
 
 							<div>
@@ -1483,14 +1508,14 @@
 							<div>
 								<div class="label">Итого</div>
 
-								<div class="val price">40 000 ₽</div>
+								<div class="val price">10 400 ₽</div>
 							</div>
 						</div>
 
 						<div class="text">
-							<p>Перед получением сможете осмотреть и примерить кольцо. При отказе в пункте выдачи вернём сумму заказа и оплатим обратную доставку.</p>
+							<p>Перед получением сможете осмотреть и примерить подвеску. При отказе в пункте выдачи вернём сумму заказа и оплатим обратную доставку.</p>
 
-							<button class="btn submit_btn">Оплатить — 40 000 ₽</button>
+							<button class="btn submit_btn">Оплатить — 10 400 ₽</button>
 
 							<p>Кнопка показывает завершение макета. Платёж не проводится.</p>
 						</div>
@@ -1512,17 +1537,17 @@
 					<div class="modal_data">
 						<div class="product">
 							<picture class="thumb">
-								<img src="images/tmp/order_product_thumb.jpg" alt="" loading="lazy">
+								<img src="images/tmp/product2_thumbs_img1.jpg" alt="" loading="lazy">
 							</picture>
 
 							<div>
-								<div class="name">Кольцо «Русалка»</div>
+								<div class="name">Подвеска «Карандаш»</div>
 
-								<div class="code">Артикул С-201</div>
+								<div class="code">Артикул С-044</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Регулируемый шнурок в комплекте</div>
 								</div>
 							</div>
 						</div>
@@ -1594,23 +1619,23 @@
 					<div class="modal_data">
 						<div class="product">
 							<picture class="thumb">
-								<img src="images/tmp/order_product_thumb.jpg" alt="" loading="lazy">
+								<img src="images/tmp/product2_thumbs_img1.jpg" alt="" loading="lazy">
 							</picture>
 
 							<div>
-								<div class="name">Кольцо «Русалка»</div>
+								<div class="name">Подвеска «Карандаш»</div>
 
-								<div class="code">Артикул С-201</div>
+								<div class="code">Артикул С-044</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Регулируемый шнурок в комплекте</div>
 								</div>
 							</div>
 						</div>
 
 						<div class="text">
-							<p>Расскажите, что хотите изменить: камень, отделку, гравировку или детали формы. Мы проверим возможность исполнения и предложим решение.</p>
+							<p>Расскажите, что хотите изменить: надпись, отделку или детали формы. Мы проверим возможность исполнения и предложим решение.</p>
 						</div>
 
 						<form action="" class="form">
@@ -1676,17 +1701,17 @@
 					<div class="modal_data">
 						<div class="product">
 							<picture class="thumb">
-								<img src="images/tmp/order_product_thumb.jpg" alt="" loading="lazy">
+								<img src="images/tmp/product2_thumbs_img1.jpg" alt="" loading="lazy">
 							</picture>
 
 							<div>
-								<div class="name">Кольцо «Русалка»</div>
+								<div class="name">Подвеска «Карандаш»</div>
 
-								<div class="code">Артикул С-201</div>
+								<div class="code">Артикул С-044</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Регулируемый шнурок в комплекте</div>
 								</div>
 							</div>
 						</div>

@@ -317,13 +317,18 @@
 										<img src="images/ic_product_delivery.svg" alt="" loading="lazy">
 									</picture>
 
-									<span>Бесплатная доставка с примеркой</span>
+									<span>
+										<span data-state="silver">Бесплатная доставка с примеркой</span>
+										<span class="hide" data-state="gold platinum">Бесплатная доставка по России</span>
+									</span>
 								</div>
 
 								<div class="desc">
-									<p>Доставим кольцо в выбранный вами пункт СДЭК. Перед получением вы сможете осмотреть и примерить украшение.</p>
+									<p data-state="silver">Доставим кольцо в выбранный вами пункт СДЭК. Перед получением вы сможете осмотреть и примерить украшение.</p>
 
-									<p>Не подойдёт — откажитесь от получения. Вернём полную стоимость, обратную доставку оплатим сами.</p>
+									<p data-state="silver">Не подойдёт — откажитесь от получения. Вернём полную стоимость, обратную доставку оплатим сами.</p>
+
+									<p class="hide" data-state="gold platinum">Готовое кольцо отправим в выбранный вами пункт СДЭК. Параметры, стоимость и срок изготовления согласуем заранее.</p>
 								</div>
 							</div>
 
@@ -337,7 +342,7 @@
 								<div class="vals">
 									<div class="grid_row">
 										<label class="main">
-											<input type="radio" name="metal" checked>
+											<input type="radio" name="metal" value="silver" checked>
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal1.svg" alt="" loading="lazy">
@@ -347,7 +352,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal">
+											<input type="radio" name="metal" value="gold">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal2.svg" alt="" loading="lazy">
@@ -357,7 +362,7 @@
 										</label>
 
 										<label class="main">
-											<input type="radio" name="metal">
+											<input type="radio" name="metal" value="platinum">
 
 											<picture class="icon">
 												<img src="images/tmp/ic_product_metal1.svg" alt="" loading="lazy">
@@ -419,7 +424,7 @@
 								</div>
 							</div>
 
-							<div class="size">
+							<div class="size" data-empty="не выбран" data-unknown="уточним">
 								<div class="top">
 									<div class="name">Размер кольца</div>
 
@@ -448,14 +453,14 @@
 											<input type="radio" name="size">
 
 											<span class="val">17</span>
-											<span>готовое</span>
+											<span data-ready="готовое" data-manufacture="изготовим">готовое</span>
 										</label>
 
 										<label class="ready">
 											<input type="radio" name="size">
 
 											<span class="val">17,5</span>
-											<span>готовое</span>
+											<span data-ready="готовое" data-manufacture="изготовим">готовое</span>
 										</label>
 
 										<label class="will_manufacture">
@@ -496,14 +501,15 @@
 								</div>
 
 								<div class="exp">
-									<span class="ready">Готовое — есть в наличии.</span>
-									<span class="will_manufacture">Изготовим — сделаем повтор модели.</span>
+									<span class="ready" data-state="silver">Готовое — есть в наличии.</span>
+									<span class="will_manufacture" data-state="silver">Изготовим — сделаем повтор модели.</span>
+									<span class="will_manufacture hide" data-state="gold platinum">Золото и платина — изготовление по выбранным параметрам.</span>
 								</div>
 
 								<button class="other_size_btn"  data-open-modal="other_size_modal">Другой размер или пока не знаю</button>
 							</div>
 
-							<div class="order_info order_info1">
+							<div class="order_info order_info1" data-state="silver">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
@@ -512,20 +518,32 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val">Серебро 925 · Размер <span class="performance_size">не выбран</span></div>
+										<div class="val"><span class="performance_metal">Серебро 925</span> · Размер <span class="performance_size">не выбран</span></div>
 									</div>
 								</div>
 
-								<div class="info">
-									<div>Выберите размер, чтобы узнать наличие и срок.</div>
+								<div class="price by_calculation hide" data-state="quote unknown">Стоимость по расчёту</div>
 
-									<div><span>За кольцо в серебре 925 с жемчугом.</span></div>
+								<div class="info">
+									<div data-state="select">Выберите размер, чтобы узнать наличие и срок.</div>
+
+									<div class="ready hide" data-state="ready">В наличии. Отправим в течение 2 рабочих дней.</div>
+
+									<div class="will_manufacture hide" data-state="repeat">Изготовим повтор модели за 2–3 недели.</div>
+
+									<div class="will_manufacture hide" data-state="quote">Рассчитаем стоимость и срок изготовления.</div>
+
+									<div class="will_manufacture hide" data-state="unknown">Поможем с размером, рассчитаем цену и срок.</div>
+
+									<div data-state="select ready repeat"><span>За кольцо в серебре 925 с жемчугом.</span></div>
+
+									<div class="hide" data-state="quote unknown"><span>Точную цену сообщим до оплаты.</span></div>
 								</div>
 
-								<div class="price">40 000 ₽</div>
+								<div class="price" data-state="select ready repeat">40 000 ₽</div>
 							</div>
 
-							<div class="order_info order_info2 hide">
+							<div class="order_info order_info2 hide" data-state="gold">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
@@ -534,18 +552,24 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val"><span class="performance_color">Жёлтое</span> золото <span class="performance_fineness">585</span> · Размер <span class="performance_size">не выбран</span></div>
+										<div class="val"><span class="performance_metal"><span class="performance_color">Жёлтое</span> золото <span class="performance_fineness">585</span></span> · Размер <span class="performance_size">не выбран</span></div>
 									</div>
 								</div>
 
 								<div class="price by_calculation">Стоимость по расчёту</div>
 
 								<div class="info">
-									<div>Выберите размер, чтобы узнать наличие и срок.</div>
+									<div data-state="select">Выберите размер, чтобы узнать наличие и срок.</div>
+
+									<div class="will_manufacture hide" data-state="quote">Рассчитаем стоимость и срок изготовления.</div>
+
+									<div class="will_manufacture hide" data-state="unknown">Поможем с размером, рассчитаем цену и срок.</div>
+
+									<div><span>Точную цену сообщим до оплаты.</span></div>
 								</div>
 							</div>
 
-							<div class="order_info order_info3 hide">
+							<div class="order_info order_info3 hide" data-state="platinum">
 								<div class="your_performance">
 									<picture class="thumb">
 										<img src="images/tmp/product_performance_thumb.png" alt="" loading="lazy">
@@ -554,23 +578,39 @@
 									<div>
 										<div class="label">Ваше исполнение</div>
 
-										<div class="val">Платина 950 · Размер <span class="performance_size">не выбран</span></div>
+										<div class="val"><span class="performance_metal">Платина 950</span> · Размер <span class="performance_size">не выбран</span></div>
 									</div>
 								</div>
 
 								<div class="price by_calculation">Стоимость по расчёту</div>
 
 								<div class="info">
-									<div>Выберите размер, чтобы узнать наличие и срок.</div>
+									<div data-state="select">Выберите размер, чтобы узнать наличие и срок.</div>
+
+									<div class="will_manufacture hide" data-state="quote">Рассчитаем стоимость и срок изготовления.</div>
+
+									<div class="will_manufacture hide" data-state="unknown">Поможем с размером, рассчитаем цену и срок.</div>
+
+									<div><span>Точную цену сообщим до оплаты.</span></div>
 								</div>
 							</div>
 
 							<div class="btns">
-								<button class="size_btn">Выбрать размер</button>
+								<button class="size_btn" data-state="select">Выбрать размер</button>
 
-								<button class="buy_btn hide" data-open-modal="order_modal">Купить</button>
+								<button class="buy_btn hide" data-state="ready" data-open-modal="order_modal">Купить — 40 000 ₽</button>
 
-								<div class="exp">Размер не выбран автоматически.</div>
+								<button class="buy_btn hide" data-state="repeat" data-open-modal="order_modal2">Заказать изготовление — 40 000 ₽</button>
+
+								<button class="buy_btn hide" data-state="quote unknown" data-open-modal="cost_production_order_modal">Узнать стоимость и срок</button>
+
+								<div class="exp" data-state="select">Размер не выбран автоматически.</div>
+
+								<div class="exp hide" data-state="ready">Оплата на сайте при оформлении заказа.</div>
+
+								<div class="exp hide" data-state="repeat">Срок изготовления указан до оплаты заказа.</div>
+
+								<div class="exp hide" data-state="quote unknown">Без оплаты и обязательств на этом шаге.</div>
 
 								<button class="edit_btn" data-open-modal="change_model_order_modal">
 									<svg class="icon"><use xlink:href="images/sprite.svg#ic_edit"></use></svg>
@@ -721,7 +761,7 @@
 
 														<p>Не выбирайте его наугад. Поможем определить размер по подходящему кольцу или согласуем дальнейшие действия до изготовления.</p>
 
-														<button class="btn">Помогите с размером</button>
+														<button class="btn" data-size-unknown data-open-modal="cost_production_order_modal">Помогите с размером</button>
 													</div>
 												</div>
 											</div>
@@ -759,7 +799,7 @@
 
 														<p>Если размер неизвестен или нужен промежуточный, оставьте запрос. Мы уточним его до изготовления.</p>
 
-														<button class="btn">Уточнить размер с ателье</button>
+														<button class="btn" data-size-unknown data-open-modal="cost_production_order_modal">Уточнить размер с ателье</button>
 
 														<p><b>Фотографии модели</b></p>
 
@@ -959,7 +999,7 @@
 
 														<p>Стоимость и срок рассчитываем по выбранным параметрам. Сначала согласуем предложение, затем вы решаете, оформлять ли заказ.</p>
 
-														<button class="btn">Выбрать металл и получить расчёт</button>
+														<button class="btn" data-select-metal="gold">Выбрать металл и получить расчёт</button>
 													</div>
 												</div>
 											</div>
@@ -1366,8 +1406,8 @@
 								<div class="code">Артикул С-201</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Размер <span class="performance_size">17</span></div>
 								</div>
 							</div>
 						</div>
@@ -1450,8 +1490,8 @@
 								<div class="code">Артикул С-201</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Размер <span class="performance_size">17</span></div>
 								</div>
 							</div>
 						</div>
@@ -1554,10 +1594,16 @@
 								<div class="val">Выбранный пункт СДЭК</div>
 							</div>
 
-							<div>
+							<div data-state="ready">
 								<div class="label">Отправка</div>
 
 								<div class="val">В течение 2 рабочих дней</div>
+							</div>
+
+							<div class="hide" data-state="repeat">
+								<div class="label">Изготовление</div>
+
+								<div class="val">2–3 недели</div>
 							</div>
 
 							<div>
@@ -1607,8 +1653,8 @@
 								<div class="code">Артикул С-201</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Размер <span class="performance_size">17</span></div>
 								</div>
 							</div>
 						</div>
@@ -1689,8 +1735,8 @@
 								<div class="code">Артикул С-201</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Размер <span class="performance_size">17</span></div>
 								</div>
 							</div>
 						</div>
@@ -1771,8 +1817,8 @@
 								<div class="code">Артикул С-201</div>
 
 								<div class="options">
-									<div>Серебро 925</div>
-									<div>Размер 17</div>
+									<div class="selected_metal">Серебро 925</div>
+									<div>Размер <span class="performance_size">17</span></div>
 								</div>
 							</div>
 						</div>
@@ -1840,7 +1886,7 @@
 								<div class="label">Ваш размер</div>
 
 								<div class="field">
-									<input type="text" name="" value="" class="input" placeholder="Например, 18,25">
+									<input type="text" name="" value="" class="input" placeholder="Например, 18,25" inputmode="decimal" pattern="(1[2-9]|2[0-9])([.,](0|00|25|5|50|75))?|30([.,]00?)?" title="От 12 до 30 с шагом 0,25" required>
 								</div>
 							</div>
 
@@ -1853,7 +1899,7 @@
 							<p>Если не уверены, уточним размер вместе до изготовления.</p>
 						</div>
 
-						<button class="dont_know_btn">Пока не знаю размер</button>
+						<button class="dont_know_btn" data-size-unknown data-open-modal="cost_production_order_modal">Пока не знаю размер</button>
 					</div>
 				</div>
 			</div>

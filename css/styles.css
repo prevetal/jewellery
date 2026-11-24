@@ -4987,6 +4987,12 @@ header .menu .item > a:not(.mark).active
 /*------------------
     Product info
 ------------------*/
+[data-state].hide
+{
+    display: none !important;
+}
+
+
 .product_info
 {
     margin-bottom: 14px;
@@ -5665,6 +5671,7 @@ header .menu .item > a:not(.mark).active
             height: 48px;
 
             cursor: pointer;
+            transition: .2s linear;
             text-align: center;
 
             border-radius: 2px;
@@ -5674,6 +5681,14 @@ header .menu .item > a:not(.mark).active
             {
                 border: 1px solid #a8c0b0;
                 background: #eff5f1;
+
+
+                &:has(input:checked)
+                {
+                    border-color: #4d7560;
+                    background: #d9e8df;
+                    box-shadow: inset 0 0 0 1px #4d7560;
+                }
             }
 
 
@@ -5681,6 +5696,20 @@ header .menu .item > a:not(.mark).active
             {
                 border: 1px solid #ddd3c1;
                 background: #fcfaf6;
+
+
+                &:has(input:checked)
+                {
+                    border-color: var(--primary_color);
+                    background: #f3e9d8;
+                    box-shadow: inset 0 0 0 1px var(--primary_color);
+                }
+            }
+
+
+            &:has(input:checked) .val
+            {
+                font-weight: 500;
             }
 
 
@@ -5785,12 +5814,6 @@ header .menu .item > a:not(.mark).active
         background: #ebeced;
 
 
-        &.hide
-        {
-            display: none;
-        }
-
-
         .your_performance
         {
             display: flex;
@@ -5868,6 +5891,12 @@ header .menu .item > a:not(.mark).active
             }
 
 
+            .will_manufacture
+            {
+                color: var(--primary_color);
+            }
+
+
             span
             {
                 color: #808080;
@@ -5895,7 +5924,7 @@ header .menu .item > a:not(.mark).active
                 text-align: left;
 
 
-                & + .info
+                &:not(.hide) + .info
                 {
                     width: 100%;
                     margin-top: -10px;
@@ -5926,12 +5955,6 @@ header .menu .item > a:not(.mark).active
 
             color: var(--light_color);
             background: var(--primary_color);
-
-
-            &.hide
-            {
-                display: none;
-            }
 
 
             @media (hover: hover) and (pointer: fine)
